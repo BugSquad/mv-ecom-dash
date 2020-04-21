@@ -33,7 +33,9 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # My Apps
     'baseview',
+    'authorization',
     'dashboard',
+    'utils',
 
     # Django Apps
     'django.contrib.admin',
