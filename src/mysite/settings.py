@@ -36,6 +36,17 @@ INSTALLED_APPS = [
     'authorization',
     'dashboard',
     'utils',
+    'users',
+    'services',
+    'customers',
+    'vendors',
+    'companies',
+    'products',
+    'promotions',
+    'finance',
+    'support',
+    'security',
+    'reports',
 
     # Django Apps
     'django.contrib.admin',
