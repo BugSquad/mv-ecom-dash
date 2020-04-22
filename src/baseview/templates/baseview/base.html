@@ -98,7 +98,7 @@
       </a>
     </li>
     <li class="nav-item active">
-      <a class="nav-link" href="{% url "mv_admin_dashboard" %}">
+      <a class="nav-link" href="{% url "mv_admin_users" %}">
         <i class="fas fa-fw fa-user-friends"></i>
         <span>Users</span>
       </a>
@@ -110,18 +110,19 @@
       </a>
       <div class="dropdown-menu" aria-labelledby="pagesDropdown">
         {% comment %} <h6 class="dropdown-header">Login Screens:</h6> {% endcomment %}
-        <a class="dropdown-item" href="{% url "mv_admin_login" %}">Categories</a>
-        <a class="dropdown-item" href="{% url "mv_admin_forgot_password" %}">Providers</a>
+        <a class="dropdown-item" href="{% url "mv_admin_services" %}">Services</a>
+        <a class="dropdown-item" href="{% url "mv_admin_srv_categories" %}">Categories</a>
+        <a class="dropdown-item" href="{% url "mv_admin_srv_providers" %}">Providers</a>
       </div>
     </li>
     <li class="nav-item active">
-      <a class="nav-link" href="{% url "mv_admin_dashboard" %}">
+      <a class="nav-link" href="{% url "mv_admin_customers" %}">
         <i class="fas fa-fw fa-user-check"></i>
         <span>Customers</span>
       </a>
     </li>
     <li class="nav-item active">
-      <a class="nav-link" href="{% url "mv_admin_dashboard" %}">
+      <a class="nav-link" href="{% url "mv_admin_vendors" %}">
         <i class="fas fa-fw fa-store"></i>
         <span>Vendors</span>
       </a>
@@ -132,8 +133,8 @@
         <span>Companies</span>
       </a>
       <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-        <a class="dropdown-item" href="{% url "mv_admin_login" %}">Categories</a>
-        <a class="dropdown-item" href="{% url "mv_admin_forgot_password" %}">Shops</a>
+        <a class="dropdown-item" href="{% url "mv_admin_cmp_categories" %}">Categories</a>
+        <a class="dropdown-item" href="{% url "mv_admin_companies" %}">Shops</a>
       </div>
     </li>
     <li class="nav-item dropdown">
@@ -142,18 +143,21 @@
         <span>Products</span>
       </a>
       <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-        <a class="dropdown-item" href="{% url "mv_admin_login" %}">Categories</a>
-        <a class="dropdown-item" href="{% url "mv_admin_forgot_password" %}">Items</a>
+        <a class="dropdown-item" href="{% url "mv_admin_prd_categories" %}">Categories</a>
+        <a class="dropdown-item" href="{% url "mv_admin_products" %}">Items</a>
       </div>
     </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-fw fa-tags"></i>
-        <span>Offers</span>
+        <span>Promotions</span>
       </a>
       <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-        <a class="dropdown-item" href="{% url "mv_admin_login" %}">Discounts</a>
-        <a class="dropdown-item" href="{% url "mv_admin_forgot_password" %}">Promo-codes</a>
+        <a class="dropdown-item" href="{% url "mv_admin_prm_discounts" %}">Discounts</a>
+        <a class="dropdown-item" href="{% url "mv_admin_prm_promocodes" %}">Promo-codes</a>
+        <a class="dropdown-item" href="{% url "mv_admin_prm_badges" %}">Badges</a>
+        <a class="dropdown-item" href="{% url "mv_admin_prm_advertising" %}">Advertising</a>
+        <a class="dropdown-item" href="{% url "mv_admin_promotions" %}">Promotions</a>
       </div>
     </li>
     <li class="nav-item dropdown">
@@ -162,11 +166,13 @@
         <span>Finance</span>
       </a>
       <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-        <a class="dropdown-item" href="{% url "mv_admin_login" %}">Orders</a>
-        <a class="dropdown-item" href="{% url "mv_admin_forgot_password" %}">Delivery</a>
-        <a class="dropdown-item" href="{% url "mv_admin_forgot_password" %}">Returns</a>
-        <a class="dropdown-item" href="{% url "mv_admin_forgot_password" %}">Payments</a>
-        <a class="dropdown-item" href="{% url "mv_admin_forgot_password" %}">Refunds</a>
+        <a class="dropdown-item" href="{% url "mv_admin_finance" %}">Overview</a>
+        <a class="dropdown-item" href="{% url "mv_admin_fin_orders" %}">Orders</a>
+        <a class="dropdown-item" href="{% url "mv_admin_fin_payments" %}">Payments</a>
+        <a class="dropdown-item" href="{% url "mv_admin_fin_delivery" %}">Delivery</a>
+        <a class="dropdown-item" href="{% url "mv_admin_fin_returns" %}">Returns</a>
+        <a class="dropdown-item" href="{% url "mv_admin_fin_refunds" %}">Refunds</a>
+        <a class="dropdown-item" href="{% url "mv_admin_fin_methods" %}">Payment Methods</a>
       </div>
     </li>
     <li class="nav-item dropdown">
@@ -175,8 +181,9 @@
         <span>Support</span>
       </a>
       <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-        <a class="dropdown-item" href="{% url "mv_admin_login" %}">Complaints</a>
-        <a class="dropdown-item" href="{% url "mv_admin_forgot_password" %}">Suggestions</a>
+        <a class="dropdown-item" href="{% url "mv_admin_support" %}">Overview</a>
+        <a class="dropdown-item" href="{% url "mv_admin_spt_complaints" %}">Complaints</a>
+        <a class="dropdown-item" href="{% url "mv_admin_spt_suggestions" %}">Suggestions</a>
       </div>
     </li>
     <li class="nav-item dropdown">
@@ -185,8 +192,18 @@
         <span>Security</span>
       </a>
       <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-        <a class="dropdown-item" href="{% url "mv_admin_login" %}">Groups</a>
-        <a class="dropdown-item" href="{% url "mv_admin_forgot_password" %}">Permissions</a>
+        <a class="dropdown-item" href="{% url "mv_admin_security" %}">Overview</a>
+        <a class="dropdown-item" href="{% url "mv_admin_sec_groups" %}">Groups</a>
+        <a class="dropdown-item" href="{% url "mv_admin_sec_permissions" %}">Permissions</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-fw fa-file-alt"></i>
+        <span>Reports</span>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+        <a class="dropdown-item" href="{% url "mv_admin_reports" %}">Overview</a>
       </div>
     </li>
     
@@ -200,7 +217,7 @@
 
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          {% block sb_admin_breadcrumb %}<i class="fa fa-dashboard"></i>  <a href="{% url "mv_admin_start" %}">Django SB Admin</a>{% endblock sb_admin_breadcrumb %}
+          {% block sb_admin_breadcrumb %}<i class="fa fa-dashboard"></i>  <a href="{% url "mv_admin_start" %}">MV Ecom Admin</a>{% endblock sb_admin_breadcrumb %}
         </li>
         {% block sb_admin_breadcrumb_active %}
         {% endblock sb_admin_breadcrumb_active %}
@@ -208,9 +225,9 @@
       {% block sb_admin_content %}
       <div class="alert alert-secondary alert-dismissable show">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <i class="fa fa-info-circle"></i>  <strong>Django SB Admin</strong> This and everything below is inside <code>sb_admin_content</code> block.
+        <i class="fa fa-info-circle"></i>  <strong>MV Ecom Admin</strong> This and everything below is inside <code>sb_admin_content</code> block.
       </div>
-      <h2 class="page-header">Django SB Admin</h2>
+      <h2 class="page-header">MV Ecom Admin</h2>
       <p class="lead">Reusable Django application providing SB Admin dashboard theme.</p>
       <h3>Links</h3>
       <ul>
