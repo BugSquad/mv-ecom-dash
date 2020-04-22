@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -9,17 +10,13 @@ def blank(request):
                   {"nav_active":"blank"})
 
 def error_400(request, exception):
-        data = {"nav_active":"bad_request"}
-        return render(request, 'utils/mv_admin_400.html', data)
+        return HttpResponse(status=400)
 
 def error_403(request,  exception):
-        data = {"nav_active":"forbidden"}
-        return render(request, 'utils/mv_admin_403.html', data)
+        return HttpResponse(status=403)
 
 def error_404(request,  exception):
-        data = {"nav_active":"not_found"}
-        return render(request, 'utils/mv_admin_404.html', data)
+        return HttpResponse(status=404)
 
 def error_500(request):
-        data = {"nav_active":"server_error"}
-        return render(request, 'utils/mv_admin_500.html', data)
+        return HttpResponse(status=500)

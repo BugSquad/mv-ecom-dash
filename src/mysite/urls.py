@@ -26,7 +26,7 @@ import utils.views
 
 urlpatterns = [
     url(r'^$', baseview.views.start, name='mv_admin_start'),
-     path('forgot_password/', TemplateView.as_view(
+    path('forgot_password/', TemplateView.as_view(
         template_name="authorization/forgot_password.html"),
         name='mv_admin_forgot_password'
     ),
@@ -39,7 +39,7 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-handler400 = 'utils.views.error_400'
-handler403 = 'utils.views.error_403'
-handler404 = 'utils.views.error_404'
-handler500 = 'utils.views.error_500'
+# handler400 = 'utils.views.error_400'
+# handler403 = 'utils.views.error_403'
+# handler404 = 'utils.views.error_404'
+# handler500 = 'utils.views.error_500'

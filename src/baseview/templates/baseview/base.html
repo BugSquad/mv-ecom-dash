@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{% block sb_admin_description %}{% endblock sb_admin_description %}">
   <meta name="author" content="{% block sb_admin_author %}{% endblock %}">
-  <title>{% block title %}Django SB Admin -Bootstrap Admin Template{% endblock %}</title>
+  <title>{% block title %}MV Ecom Admin Dashboard{% endblock %}</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -31,7 +31,7 @@
 
 <body id="page-top">
 <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-  <a class="navbar-brand" href="{% block sb_admin_header_url %}{% url "mv_admin_start" %}{% endblock sb_admin_header_url %}">{% block sb_admin_header %}Django SB Admin{% endblock sb_admin_header %}</a>
+  <a class="navbar-brand" href="{% block sb_admin_header_url %}{% url "mv_admin_start" %}{% endblock sb_admin_header_url %}">{% block sb_admin_header %}MV Ecom Admin{% endblock sb_admin_header %}</a>
 
   <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
   {% block sb_admin_navbar_right %}
@@ -97,22 +97,99 @@
         <span>Dashboard</span>
       </a>
     </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="{% url "mv_admin_dashboard" %}">
+        <i class="fas fa-fw fa-user-friends"></i>
+        <span>Users</span>
+      </a>
+    </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="fas fa-fw fa-folder"></i>
-        <span>Pages</span>
+        <i class="fas fa-fw fa-taxi"></i>
+        <span>Services</span>
       </a>
       <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-        <h6 class="dropdown-header">Login Screens:</h6>
-        <a class="dropdown-item" href="{% url "mv_admin_login" %}">Login</a>
-        <a class="dropdown-item" href="{% url "mv_admin_forgot_password" %}">Forgot Password</a>
+        {% comment %} <h6 class="dropdown-header">Login Screens:</h6> {% endcomment %}
+        <a class="dropdown-item" href="{% url "mv_admin_login" %}">Categories</a>
+        <a class="dropdown-item" href="{% url "mv_admin_forgot_password" %}">Providers</a>
       </div>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="login.html">
-        <i class="fas fa-fw fa-chart-area"></i>
-        <span>Charts</span></a>
+    <li class="nav-item active">
+      <a class="nav-link" href="{% url "mv_admin_dashboard" %}">
+        <i class="fas fa-fw fa-user-check"></i>
+        <span>Customers</span>
+      </a>
     </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="{% url "mv_admin_dashboard" %}">
+        <i class="fas fa-fw fa-store"></i>
+        <span>Vendors</span>
+      </a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-fw fa-building"></i>
+        <span>Companies</span>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+        <a class="dropdown-item" href="{% url "mv_admin_login" %}">Categories</a>
+        <a class="dropdown-item" href="{% url "mv_admin_forgot_password" %}">Shops</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-fw fa-gifts"></i>
+        <span>Products</span>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+        <a class="dropdown-item" href="{% url "mv_admin_login" %}">Categories</a>
+        <a class="dropdown-item" href="{% url "mv_admin_forgot_password" %}">Items</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-fw fa-tags"></i>
+        <span>Offers</span>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+        <a class="dropdown-item" href="{% url "mv_admin_login" %}">Discounts</a>
+        <a class="dropdown-item" href="{% url "mv_admin_forgot_password" %}">Promo-codes</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-fw fa-cash-register"></i>
+        <span>Finance</span>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+        <a class="dropdown-item" href="{% url "mv_admin_login" %}">Orders</a>
+        <a class="dropdown-item" href="{% url "mv_admin_forgot_password" %}">Delivery</a>
+        <a class="dropdown-item" href="{% url "mv_admin_forgot_password" %}">Returns</a>
+        <a class="dropdown-item" href="{% url "mv_admin_forgot_password" %}">Payments</a>
+        <a class="dropdown-item" href="{% url "mv_admin_forgot_password" %}">Refunds</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-fw fa-headset"></i>
+        <span>Support</span>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+        <a class="dropdown-item" href="{% url "mv_admin_login" %}">Complaints</a>
+        <a class="dropdown-item" href="{% url "mv_admin_forgot_password" %}">Suggestions</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-fw fa-user-lock"></i>
+        <span>Security</span>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+        <a class="dropdown-item" href="{% url "mv_admin_login" %}">Groups</a>
+        <a class="dropdown-item" href="{% url "mv_admin_forgot_password" %}">Permissions</a>
+      </div>
+    </li>
+    
     {% endblock sb_admin_sidebar %}
   </ul>
   <div id="content-wrapper"><!-- content wrapper -->

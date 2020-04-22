@@ -1,14 +1,8 @@
-from django.shortcuts import render
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 
 def start(request):
-    """Start page with a documentation.
+    """Start at dashboard.
     """
-    return render(
-        request,
-        "baseview/start.html",
-        {
-            "nav_active": "start"
-        }
-    )
+    return HttpResponseRedirect('/dashboard/')
