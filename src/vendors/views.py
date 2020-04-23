@@ -12,3 +12,14 @@ def vendors(request):
             "nav_active": "vendors"
         }
     )
+
+def ratings(request):
+    """Ratings page.
+    """
+    return render(
+        request,
+        "vendors/mv_admin_vendors_ratings.html",
+        {
+            "nav_active": "vendors ratings"
+        }
+    )

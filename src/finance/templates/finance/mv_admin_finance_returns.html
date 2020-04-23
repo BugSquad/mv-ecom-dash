@@ -1,10 +1,11 @@
-{% extends "baseview/base.html" %}{% load static %}{% block sb_admin_title %}Blank page{% endblock sb_admin_title %}
+{% extends "baseview/base.html" %}{% load static %}{% load i18n %}
+{% block sb_admin_title %}{% trans Returns %}{% endblock sb_admin_title %}
 
 {% block sb_admin_breadcrumb_active %}<li class="breadcrumb-item active">
-      Returns
+      {% trans Returns %}
  </li>{% endblock sb_admin_breadcrumb_active %}
 {% block sb_admin_content %}
-<h1>Returns</h1>
+<h1>{% trans Returns %}</h1>
 <hr>
 <p>This is a great starting point for new Returns pages.</p>
 

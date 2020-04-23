@@ -23,3 +23,14 @@ def categories(request):
             "nav_active": "products categories"
         }
     )
+
+def ratings(request):
+    """Ratings page.
+    """
+    return render(
+        request,
+        "products/mv_admin_products_ratings.html",
+        {
+            "nav_active": "products ratings"
+        }
+    )
