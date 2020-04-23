@@ -1,10 +1,11 @@
-{% extends "baseview/base.html" %}{% load static %}{% block sb_admin_title %}Blank page{% endblock sb_admin_title %}
+{% extends "baseview/base.html" %}{% load static %}{% load i18n %}
+{% block sb_admin_title %}{% trans Discounts %}{% endblock sb_admin_title %}
 
 {% block sb_admin_breadcrumb_active %}<li class="breadcrumb-item active">
-      Discounts
+      {% trans Discounts %}
  </li>{% endblock sb_admin_breadcrumb_active %}
 {% block sb_admin_content %}
-<h1>Discounts</h1>
+<h1>{% trans Discounts %}</h1>
 <hr>
 <p>This is a great starting point for new Discounts pages.</p>
 

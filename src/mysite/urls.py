@@ -16,74 +16,84 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import url
-from django.urls import path
+from django.urls import path, include
 from django.views.generic import TemplateView
+from django.conf.urls.i18n import i18n_patterns
 
-import authorization.views
-import baseview.views
-import dashboard.views
-import utils.views
-import users.views
-import services.views
-import customers.views
-import vendors.views
-import companies.views
-import products.views
-import promotions.views
-import finance.views
-import support.views
-import security.views
-import reports.views
+import authorization.views as athviews
+import baseview.views as bviews
+import dashboard.views as dviews
+import utils.views as uviews
+import users.views as usviews
+import services.views as srviews
+import customers.views as cviews
+import vendors.views as vdviews
+import companies.views as cmviews
+import products.views as prviews
+import promotions.views as prmviews
+import finance.views as fviews
+import support.views as spviews
+import security.views as secviews
+import reports.views as rptviews
 
 urlpatterns = [
-    url(r'^$', baseview.views.start, name='mv_admin_start'),
+    url(r'^(?P<filename>(robots.txt)|(humans.txt))$',
+        bviews.robots_txt, name='robots-files'),
+
+    url(r'^i18n/', include('django.conf.urls.i18n')),
+
+    url(r'^$', bviews.start, name='mv_admin_start'),
+
     path('forgot_password/', TemplateView.as_view(
         template_name="authorization/forgot_password.html"),
         name='mv_admin_forgot_password'
     ),
     
-    url(r'^blank/$', utils.views.blank, name='mv_admin_blank'),
-    url(r'^login/$', authorization.views.login, name='mv_admin_login'),
-    url(r'^dashboard/$', dashboard.views.dashboard, name='mv_admin_dashboard'),
+    url(r'^blank/$', uviews.blank, name='mv_admin_blank'),
+    url(r'^login/$', athviews.login, name='mv_admin_login'),
+    url(r'^dashboard/$', dviews.dashboard, name='mv_admin_dashboard'),
 
-    url(r'^users/$', users.views.users, name='mv_admin_users'),
+    url(r'^users/$', usviews.users, name='mv_admin_users'),
 
-    url(r'^services/$', services.views.services, name='mv_admin_services'),
-    url(r'^srv-categories/$', services.views.categories, name='mv_admin_srv_categories'),
-    url(r'^srv-providers/$', services.views.providers, name='mv_admin_srv_providers'),
+    url(r'^services/$', srviews.services, name='mv_admin_services'),
+    url(r'^srv-categories/$', srviews.categories, name='mv_admin_srv_categories'),
+    url(r'^srv-providers/$', srviews.providers, name='mv_admin_srv_providers'),
 
-    url(r'^customers/$', customers.views.customers, name='mv_admin_customers'),
-    url(r'^vendors/$', vendors.views.vendors, name='mv_admin_vendors'),
+    url(r'^customers/$', cviews.customers, name='mv_admin_customers'),
 
-    url(r'^companies/$', companies.views.companies, name='mv_admin_companies'),
-    url(r'^cmp-categories/$', companies.views.categories, name='mv_admin_cmp_categories'),
+    url(r'^vendors/$', vdviews.vendors, name='mv_admin_vendors'),
+    url(r'^vnd-ratings/$', vdviews.ratings, name='mv_admin_vnd_ratings'),
 
-    url(r'^products/$', products.views.products, name='mv_admin_products'),
-    url(r'^prd-categories/$', products.views.categories, name='mv_admin_prd_categories'),
+    url(r'^companies/$', cmviews.companies, name='mv_admin_companies'),
+    url(r'^cmp-categories/$', cmviews.categories, name='mv_admin_cmp_categories'),
 
-    url(r'^promotions/$', promotions.views.promotions, name='mv_admin_promotions'),
-    url(r'^prm-discounts/$', promotions.views.discounts, name='mv_admin_prm_discounts'),
-    url(r'^prm-promocodes/$', promotions.views.promocodes, name='mv_admin_prm_promocodes'),
-    url(r'^prm-badges/$', promotions.views.badges, name='mv_admin_prm_badges'),
-    url(r'^prm-advertising/$', promotions.views.advertising, name='mv_admin_prm_advertising'),
+    url(r'^products/$', prviews.products, name='mv_admin_products'),
+    url(r'^prd-categories/$', prviews.categories, name='mv_admin_prd_categories'),
+    url(r'^prd-ratings/$', prviews.ratings, name='mv_admin_prd_ratings'),
 
-    url(r'^finance/$', finance.views.finance, name='mv_admin_finance'),
-    url(r'^fin-orders/$', finance.views.orders, name='mv_admin_fin_orders'),
-    url(r'^fin-payments/$', finance.views.payments, name='mv_admin_fin_payments'),
-    url(r'^fin-delivery/$', finance.views.delivery, name='mv_admin_fin_delivery'),
-    url(r'^fin-returns/$', finance.views.returns, name='mv_admin_fin_returns'),
-    url(r'^fin-refunds/$', finance.views.refunds, name='mv_admin_fin_refunds'),
-    url(r'^fin-methods/$', finance.views.methods, name='mv_admin_fin_methods'),
+    url(r'^promotions/$', prmviews.promotions, name='mv_admin_promotions'),
+    url(r'^prm-discounts/$', prmviews.discounts, name='mv_admin_prm_discounts'),
+    url(r'^prm-promocodes/$', prmviews.promocodes, name='mv_admin_prm_promocodes'),
+    url(r'^prm-badges/$', prmviews.badges, name='mv_admin_prm_badges'),
+    url(r'^prm-advertising/$', prmviews.advertising, name='mv_admin_prm_advertising'),
 
-    url(r'^support/$', support.views.support, name='mv_admin_support'),
-    url(r'^spt-complaints/$', support.views.complaints, name='mv_admin_spt_complaints'),
-    url(r'^spt-suggestions/$', support.views.suggestions, name='mv_admin_spt_suggestions'),
+    url(r'^finance/$', fviews.finance, name='mv_admin_finance'),
+    url(r'^fin-orders/$', fviews.orders, name='mv_admin_fin_orders'),
+    url(r'^fin-payments/$', fviews.payments, name='mv_admin_fin_payments'),
+    url(r'^fin-delivery/$', fviews.delivery, name='mv_admin_fin_delivery'),
+    url(r'^fin-returns/$', fviews.returns, name='mv_admin_fin_returns'),
+    url(r'^fin-refunds/$', fviews.refunds, name='mv_admin_fin_refunds'),
+    url(r'^fin-methods/$', fviews.methods, name='mv_admin_fin_methods'),
 
-    url(r'^security/$', security.views.security, name='mv_admin_security'),
-    url(r'^sec-groups/$', security.views.groups, name='mv_admin_sec_groups'),
-    url(r'^sec-permissions/$', security.views.permissions, name='mv_admin_sec_permissions'),
+    url(r'^support/$', spviews.support, name='mv_admin_support'),
+    url(r'^spt-complaints/$', spviews.complaints, name='mv_admin_spt_complaints'),
+    url(r'^spt-suggestions/$', spviews.suggestions, name='mv_admin_spt_suggestions'),
 
-    url(r'^reports/$', reports.views.reports, name='mv_admin_reports'),
+    url(r'^security/$', secviews.security, name='mv_admin_security'),
+    url(r'^sec-groups/$', secviews.groups, name='mv_admin_sec_groups'),
+    url(r'^sec-permissions/$', secviews.permissions, name='mv_admin_sec_permissions'),
+
+    url(r'^reports/$', rptviews.reports, name='mv_admin_reports'),
 ]
 
 if settings.DEBUG:
