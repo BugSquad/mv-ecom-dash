@@ -1,5 +1,9 @@
 
 @media (min-width: 768px){
-  #wrapper {padding-right: 225px; padding-left: 0;}
+  #wrapper {padding-right: 0; padding-left: 0;}
   .side-nav{right: 0;left: auto;}
+  footer.sticky-footer {right: auto; left: 0;}
+  .scroll-to-top {right: auto; left: 15px;}
+  .sidebar .nav-item .nav-link {text-align: right;}
+  .navbar-nav .nav-item.dropdown .dropdown-toggle::after {float: left; content: '\f104';}
 }

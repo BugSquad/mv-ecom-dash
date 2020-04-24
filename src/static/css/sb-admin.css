@@ -10886,6 +10886,7 @@ footer.sticky-footer {
   display: flex;
   position: absolute;
   right: 0;
+  right: auto;
   bottom: 0;
   width: calc(100% - 90px);
   height: 80px;
