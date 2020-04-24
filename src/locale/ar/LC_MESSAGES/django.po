@@ -3,21 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-23 10:28+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2020-04-24 10:32+0200\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.3\n"
 
 #: baseview/templates/baseview/base.html:11
 msgid "MV Ecom Admin Dashboard"
@@ -33,165 +33,165 @@ msgstr "مدير السوق"
 #: baseview/templates/baseview/base.html:69
 #: baseview/templates/baseview/base.html:81
 msgid "Action"
-msgstr ""
+msgstr "إجراء"
 
 #: baseview/templates/baseview/base.html:70
 #: baseview/templates/baseview/base.html:82
 msgid "Another action"
-msgstr ""
+msgstr "إجراء آخر"
 
 #: baseview/templates/baseview/base.html:72
 #: baseview/templates/baseview/base.html:84
 msgid "Something else here"
-msgstr ""
+msgstr "شيء آخر هنا"
 
 #: baseview/templates/baseview/base.html:92
 msgid "Settings"
-msgstr ""
+msgstr "الإعدادات"
 
 #: baseview/templates/baseview/base.html:93
 msgid "Activity Log"
-msgstr ""
+msgstr "سِجل النشاط"
 
 #: baseview/templates/baseview/base.html:95
 msgid "Logout"
-msgstr ""
+msgstr "تسجيل الخروج"
 
 #: baseview/templates/baseview/base.html:108
 msgid "Dashboard"
-msgstr ""
+msgstr "اللوحة الرئيسية"
 
 #: baseview/templates/baseview/base.html:114
 msgid "Users"
-msgstr ""
+msgstr "المستخدمون"
 
 #: baseview/templates/baseview/base.html:120
 #: baseview/templates/baseview/base.html:125
 msgid "Services"
-msgstr ""
+msgstr "الخدمات"
 
 #: baseview/templates/baseview/base.html:126
 #: baseview/templates/baseview/base.html:148
 #: baseview/templates/baseview/base.html:158
 msgid "Categories"
-msgstr ""
+msgstr "الأقسام"
 
 #: baseview/templates/baseview/base.html:127
 msgid "Providers"
-msgstr ""
+msgstr "مقدمو الخدمة"
 
 #: baseview/templates/baseview/base.html:133
 msgid "Customers"
-msgstr ""
+msgstr "العملاء"
 
 #: baseview/templates/baseview/base.html:139
 msgid "Vendors"
-msgstr ""
+msgstr "التجار"
 
 #: baseview/templates/baseview/base.html:145
 msgid "Companies"
-msgstr ""
+msgstr "الشركات"
 
 #: baseview/templates/baseview/base.html:149
 msgid "Shops"
-msgstr ""
+msgstr "المتاجر"
 
 #: baseview/templates/baseview/base.html:155
 msgid "Products"
-msgstr ""
+msgstr "المنتجات"
 
 #: baseview/templates/baseview/base.html:159
 msgid "Items"
-msgstr ""
+msgstr "المنتجات"
 
 #: baseview/templates/baseview/base.html:165
 #: baseview/templates/baseview/base.html:172
 msgid "Promotions"
-msgstr ""
+msgstr "الترقيات"
 
 #: baseview/templates/baseview/base.html:168
 msgid "Discounts"
-msgstr ""
+msgstr "التخفيضات"
 
 #: baseview/templates/baseview/base.html:169
 msgid "Promo-codes"
-msgstr ""
+msgstr "قسائم الشراء"
 
 #: baseview/templates/baseview/base.html:170
 msgid "Badges"
-msgstr ""
+msgstr "الشعارات"
 
 #: baseview/templates/baseview/base.html:171
 msgid "Advertising"
-msgstr ""
+msgstr "الإعلانات"
 
 #: baseview/templates/baseview/base.html:178
 msgid "Finance"
-msgstr ""
+msgstr "الماليات"
 
 #: baseview/templates/baseview/base.html:181
 #: baseview/templates/baseview/base.html:196
 #: baseview/templates/baseview/base.html:207
 #: baseview/templates/baseview/base.html:218
 msgid "Overview"
-msgstr ""
+msgstr "نظرة عامة"
 
 #: baseview/templates/baseview/base.html:182
 msgid "Orders"
-msgstr ""
+msgstr "الطلبات"
 
 #: baseview/templates/baseview/base.html:183
 msgid "Payments"
-msgstr ""
+msgstr "المدفوعات"
 
 #: baseview/templates/baseview/base.html:184
 msgid "Delivery"
-msgstr ""
+msgstr "عمليات التوصيل"
 
 #: baseview/templates/baseview/base.html:185
 msgid "Returns"
-msgstr ""
+msgstr "المرتجعات"
 
 #: baseview/templates/baseview/base.html:186
 msgid "Refunds"
-msgstr ""
+msgstr "المبالغ المستردة"
 
 #: baseview/templates/baseview/base.html:187
 msgid "Payment Methods"
-msgstr ""
+msgstr "طرق الدفع"
 
 #: baseview/templates/baseview/base.html:193
 msgid "Support"
-msgstr ""
+msgstr "الدعم الفني"
 
 #: baseview/templates/baseview/base.html:197
 msgid "Complaints"
-msgstr ""
+msgstr "الشكاوى"
 
 #: baseview/templates/baseview/base.html:198
 msgid "Suggestions"
-msgstr ""
+msgstr "المقترحات"
 
 #: baseview/templates/baseview/base.html:204
 msgid "Security"
-msgstr ""
+msgstr "الأمن والحماية"
 
 #: baseview/templates/baseview/base.html:208
 msgid "Groups"
-msgstr ""
+msgstr "المجموعات"
 
 #: baseview/templates/baseview/base.html:209
 msgid "Permissions"
-msgstr ""
+msgstr "الصلاحيات"
 
 #: baseview/templates/baseview/base.html:215
 msgid "Reports"
-msgstr ""
+msgstr "التقارير"
 
 #: mysite/settings.py:130
 msgid "English"
-msgstr ""
+msgstr "الإنجليزية"
 
 #: mysite/settings.py:131
 msgid "Arabic"
-msgstr ""
+msgstr "العربية"
