@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-24 12:17+0000\n"
-"PO-Revision-Date: 2020-04-24 14:18+0200\n"
+"POT-Creation-Date: 2020-04-24 15:08+0000\n"
+"PO-Revision-Date: 2020-04-24 17:09+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -19,10 +19,19 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Poedit 2.3\n"
 
+#: authorization/models.py:9
+msgid "email address"
+msgstr "البريد الاليكتروني"
+
 #: authorization/templates/authorization/forgot_password.html:14
 #: authorization/templates/authorization/forgot_password.html:31
 msgid "Forgot your password"
 msgstr "نسيت كلمة المرور"
+
+#: authorization/templates/authorization/forgot_password.html:28
+#: authorization/templates/authorization/forgot_password.html:41
+msgid "Reset Password"
+msgstr "تغيير كلمة المرور"
 
 #: authorization/templates/authorization/forgot_password.html:32
 msgid ""
@@ -34,9 +43,22 @@ msgstr "أدخل بريدك الإليكتروني وسوف نرسل لك الت
 msgid "Enter email address"
 msgstr "أدخل بريدك الإليكتروني"
 
-#: authorization/templates/authorization/forgot_password.html:41
-msgid "Reset Password"
-msgstr "تغيير كلمة المرور"
+#: authorization/templates/authorization/forgot_password.html:44
+#: authorization/templates/authorization/login.html:51
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#: authorization/templates/authorization/login.html:34
+msgid "Email address"
+msgstr "البريد الاليكتروني"
+
+#: authorization/templates/authorization/login.html:47
+msgid "Remember Password"
+msgstr "تذكر كلمة المرور"
+
+#: authorization/templates/authorization/login.html:54
+msgid "Forgot Password"
+msgstr "نسيت كلمة المرور"
 
 #: baseview/templates/baseview/base.html:11
 msgid "MV Ecom Admin Dashboard"
@@ -234,11 +256,11 @@ msgstr "أقسام المتاجر"
 msgid "Statistics Overview"
 msgstr "إحصائيات عامة"
 
-#: mysite/settings.py:130
+#: mysite/settings.py:131
 msgid "English"
 msgstr "الإنجليزية"
 
-#: mysite/settings.py:131
+#: mysite/settings.py:132
 msgid "Arabic"
 msgstr "العربية"
 

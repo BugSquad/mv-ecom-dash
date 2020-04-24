@@ -6,11 +6,6 @@ from django.conf import settings
 
 # Create your views here.
 
-def start(request):
-    """Start at dashboard.
-    """
-    return HttpResponseRedirect('/dashboard/')
-
 @require_GET
 def robots_txt(request):
     lines = [
