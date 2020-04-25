@@ -42,7 +42,7 @@ urlpatterns = [
 
     url(r'^i18n/', include('django.conf.urls.i18n')),
 
-    url(r'^$', bviews.start, name='mv_admin_start'),
+    url(r'^$', athviews.signin, name='mv_admin_start'),
 
     path('forgot_password/', TemplateView.as_view(
         template_name="authorization/forgot_password.html"),
@@ -50,7 +50,9 @@ urlpatterns = [
     ),
     
     url(r'^blank/$', uviews.blank, name='mv_admin_blank'),
-    url(r'^login/$', athviews.login, name='mv_admin_login'),
+    url(r'^login/$', athviews.signin, name='mv_admin_login'),
+    url(r'^logout/$', bviews.signout, name='mv_admin_logout'),
+
     url(r'^dashboard/$', dviews.dashboard, name='mv_admin_dashboard'),
 
     url(r'^users/$', usviews.users, name='mv_admin_users'),
@@ -94,7 +96,8 @@ urlpatterns = [
     url(r'^sec-permissions/$', secviews.permissions, name='mv_admin_sec_permissions'),
 
     url(r'^reports/$', rptviews.reports, name='mv_admin_reports'),
-]
+
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

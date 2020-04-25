@@ -1,7 +1,9 @@
+from django.contrib.admin.views.decorators import staff_member_required
 from django.shortcuts import render
 
 # Create your views here.
 
+@staff_member_required(login_url='/login/?next=/security/')
 def security(request):
     """Security page.
     """
@@ -13,6 +15,7 @@ def security(request):
         }
     )
 
+@staff_member_required(login_url='/login/?next=/sec-groups/')
 def groups(request):
     """Groups page.
     """
@@ -24,6 +27,7 @@ def groups(request):
         }
     )
 
+@staff_member_required(login_url='/login/?next=/sec-permissions/')
 def permissions(request):
     """Permissions page.
     """

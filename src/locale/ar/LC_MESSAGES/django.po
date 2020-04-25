@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-24 12:17+0000\n"
-"PO-Revision-Date: 2020-04-24 14:18+0200\n"
+"POT-Creation-Date: 2020-04-25 14:08+0000\n"
+"PO-Revision-Date: 2020-04-25 16:09+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -19,10 +19,31 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Poedit 2.3\n"
 
+#: authorization/admin.py:17
+msgid "Personal info"
+msgstr "البيانات الشخصية"
+
+#: authorization/admin.py:18 baseview/templates/baseview/base.html:245
+msgid "Permissions"
+msgstr "الصلاحيات"
+
+#: authorization/admin.py:20
+msgid "Important dates"
+msgstr "تواريخ مهمة"
+
+#: authorization/models.py:44
+msgid "email address"
+msgstr "البريد الاليكتروني"
+
 #: authorization/templates/authorization/forgot_password.html:14
 #: authorization/templates/authorization/forgot_password.html:31
 msgid "Forgot your password"
 msgstr "نسيت كلمة المرور"
+
+#: authorization/templates/authorization/forgot_password.html:28
+#: authorization/templates/authorization/forgot_password.html:41
+msgid "Reset Password"
+msgstr "تغيير كلمة المرور"
 
 #: authorization/templates/authorization/forgot_password.html:32
 msgid ""
@@ -34,16 +55,33 @@ msgstr "أدخل بريدك الإليكتروني وسوف نرسل لك الت
 msgid "Enter email address"
 msgstr "أدخل بريدك الإليكتروني"
 
-#: authorization/templates/authorization/forgot_password.html:41
-msgid "Reset Password"
-msgstr "تغيير كلمة المرور"
+#: authorization/templates/authorization/forgot_password.html:44
+#: authorization/templates/authorization/login.html:61
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+#: authorization/templates/authorization/login.html:45
+msgid "Email address"
+msgstr "البريد الاليكتروني"
+
+#: authorization/templates/authorization/login.html:51
+msgid "Password"
+msgstr "كلمة المرور"
+
+#: authorization/templates/authorization/login.html:57
+msgid "Remember me"
+msgstr "تذكرني"
+
+#: authorization/templates/authorization/login.html:65
+msgid "Forgot Password ?"
+msgstr "نسيت كلمة المرور ؟"
 
 #: baseview/templates/baseview/base.html:11
 msgid "MV Ecom Admin Dashboard"
 msgstr "لوحة تحكم سوق متعدد المتاجر"
 
 #: baseview/templates/baseview/base.html:39
-#: baseview/templates/baseview/base.html:263
+#: baseview/templates/baseview/base.html:269
 msgid "MV Ecom Admin"
 msgstr "مدير السوق"
 
@@ -78,150 +116,146 @@ msgstr "الإعدادات"
 msgid "Activity Log"
 msgstr "سِجل النشاط"
 
-#: baseview/templates/baseview/base.html:118
+#: baseview/templates/baseview/base.html:122
 msgid "Logout"
 msgstr "تسجيل الخروج"
 
-#: baseview/templates/baseview/base.html:133
+#: baseview/templates/baseview/base.html:139
 msgid "Dashboard"
 msgstr "اللوحة الرئيسية"
 
-#: baseview/templates/baseview/base.html:139
+#: baseview/templates/baseview/base.html:145
 msgid "Users"
 msgstr "المستخدمون"
 
-#: baseview/templates/baseview/base.html:145
-#: baseview/templates/baseview/base.html:150
+#: baseview/templates/baseview/base.html:151
+#: baseview/templates/baseview/base.html:156
 msgid "Services"
 msgstr "الخدمات"
 
-#: baseview/templates/baseview/base.html:151
-#: baseview/templates/baseview/base.html:177
-#: baseview/templates/baseview/base.html:187
+#: baseview/templates/baseview/base.html:157
+#: baseview/templates/baseview/base.html:183
+#: baseview/templates/baseview/base.html:193
 msgid "Categories"
 msgstr "الأقسام"
 
-#: baseview/templates/baseview/base.html:152
+#: baseview/templates/baseview/base.html:158
 msgid "Providers"
 msgstr "مقدمو الخدمة"
 
-#: baseview/templates/baseview/base.html:158
+#: baseview/templates/baseview/base.html:164
 msgid "Customers"
 msgstr "العملاء"
 
-#: baseview/templates/baseview/base.html:164
-#: baseview/templates/baseview/base.html:167
+#: baseview/templates/baseview/base.html:170
+#: baseview/templates/baseview/base.html:173
 msgid "Vendors"
 msgstr "التجار"
 
-#: baseview/templates/baseview/base.html:168
+#: baseview/templates/baseview/base.html:174
 msgid "Ratings"
 msgstr "التقييمات"
 
-#: baseview/templates/baseview/base.html:174
+#: baseview/templates/baseview/base.html:180
 msgid "Companies"
 msgstr "الشركات"
 
-#: baseview/templates/baseview/base.html:178
+#: baseview/templates/baseview/base.html:184
 msgid "Shops"
 msgstr "المتاجر"
 
-#: baseview/templates/baseview/base.html:184
+#: baseview/templates/baseview/base.html:190
 msgid "Products"
 msgstr "المنتجات"
 
-#: baseview/templates/baseview/base.html:188
-#: baseview/templates/baseview/base.html:189
+#: baseview/templates/baseview/base.html:194
+#: baseview/templates/baseview/base.html:195
 msgid "Items"
 msgstr "المنتجات"
 
-#: baseview/templates/baseview/base.html:195
-#: baseview/templates/baseview/base.html:202
+#: baseview/templates/baseview/base.html:201
+#: baseview/templates/baseview/base.html:208
 msgid "Promotions"
 msgstr "الترقيات"
 
-#: baseview/templates/baseview/base.html:198
+#: baseview/templates/baseview/base.html:204
 msgid "Discounts"
 msgstr "التخفيضات"
 
-#: baseview/templates/baseview/base.html:199
+#: baseview/templates/baseview/base.html:205
 msgid "Promo-codes"
 msgstr "قسائم الشراء"
 
-#: baseview/templates/baseview/base.html:200
+#: baseview/templates/baseview/base.html:206
 msgid "Badges"
 msgstr "الشعارات"
 
-#: baseview/templates/baseview/base.html:201
+#: baseview/templates/baseview/base.html:207
 msgid "Advertising"
 msgstr "الإعلانات"
 
-#: baseview/templates/baseview/base.html:208
+#: baseview/templates/baseview/base.html:214
 msgid "Finance"
 msgstr "الماليات"
 
-#: baseview/templates/baseview/base.html:211
-#: baseview/templates/baseview/base.html:226
-#: baseview/templates/baseview/base.html:237
-#: baseview/templates/baseview/base.html:248
+#: baseview/templates/baseview/base.html:217
+#: baseview/templates/baseview/base.html:232
+#: baseview/templates/baseview/base.html:243
+#: baseview/templates/baseview/base.html:254
 msgid "Overview"
 msgstr "نظرة عامة"
 
-#: baseview/templates/baseview/base.html:212
+#: baseview/templates/baseview/base.html:218
 msgid "Orders"
 msgstr "الطلبات"
 
-#: baseview/templates/baseview/base.html:213
+#: baseview/templates/baseview/base.html:219
 msgid "Payments"
 msgstr "المدفوعات"
 
-#: baseview/templates/baseview/base.html:214
+#: baseview/templates/baseview/base.html:220
 msgid "Delivery"
 msgstr "عمليات التوصيل"
 
-#: baseview/templates/baseview/base.html:215
+#: baseview/templates/baseview/base.html:221
 msgid "Returns"
 msgstr "المرتجعات"
 
-#: baseview/templates/baseview/base.html:216
+#: baseview/templates/baseview/base.html:222
 msgid "Refunds"
 msgstr "المبالغ المستردة"
 
-#: baseview/templates/baseview/base.html:217
+#: baseview/templates/baseview/base.html:223
 #: finance/templates/finance/mv_admin_finance_methods.html:2
 #: finance/templates/finance/mv_admin_finance_methods.html:8
 msgid "Payment Methods"
 msgstr "طرق الدفع"
 
-#: baseview/templates/baseview/base.html:223
+#: baseview/templates/baseview/base.html:229
 msgid "Support"
 msgstr "الدعم الفني"
 
-#: baseview/templates/baseview/base.html:227
+#: baseview/templates/baseview/base.html:233
 msgid "Complaints"
 msgstr "الشكاوى"
 
-#: baseview/templates/baseview/base.html:228
+#: baseview/templates/baseview/base.html:234
 msgid "Suggestions"
 msgstr "المقترحات"
 
-#: baseview/templates/baseview/base.html:234
+#: baseview/templates/baseview/base.html:240
 msgid "Security"
 msgstr "الأمن والحماية"
 
-#: baseview/templates/baseview/base.html:238
+#: baseview/templates/baseview/base.html:244
 msgid "Groups"
 msgstr "المجموعات"
 
-#: baseview/templates/baseview/base.html:239
-msgid "Permissions"
-msgstr "الصلاحيات"
-
-#: baseview/templates/baseview/base.html:245
+#: baseview/templates/baseview/base.html:251
 msgid "Reports"
 msgstr "التقارير"
 
-#: baseview/templates/baseview/base.html:277
+#: baseview/templates/baseview/base.html:283
 msgid "Copyright © bugsquad.co 2020"
 msgstr "جميع الحقوق محفوظة © bugsquad.co 2020"
 
@@ -234,11 +268,11 @@ msgstr "أقسام المتاجر"
 msgid "Statistics Overview"
 msgstr "إحصائيات عامة"
 
-#: mysite/settings.py:130
+#: mysite/settings.py:132
 msgid "English"
 msgstr "الإنجليزية"
 
-#: mysite/settings.py:131
+#: mysite/settings.py:133
 msgid "Arabic"
 msgstr "العربية"
 
@@ -279,3 +313,6 @@ msgstr "مقدمو الخدمة"
 #: vendors/templates/vendors/mv_admin_vendors_ratings.html:8
 msgid "Vendors Ratings"
 msgstr "تقييمات التجار"
+
+#~ msgid "Wrong email or password"
+#~ msgstr "خطأ في البريد الاليكتروني أو كلمة المرور"

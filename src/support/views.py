@@ -1,7 +1,9 @@
+from django.contrib.admin.views.decorators import staff_member_required
 from django.shortcuts import render
 
 # Create your views here.
 
+@staff_member_required(login_url='/login/?next=/support/')
 def support(request):
     """Support page.
     """
@@ -13,6 +15,7 @@ def support(request):
         }
     )
 
+@staff_member_required(login_url='/login/?next=/spt-complaints/')
 def complaints(request):
     """Complaints page.
     """
@@ -24,6 +27,7 @@ def complaints(request):
         }
     )
 
+@staff_member_required(login_url='/login/?next=/spt-suggestions/')
 def suggestions(request):
     """Suggestions page.
     """

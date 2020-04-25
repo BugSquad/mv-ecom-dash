@@ -1,7 +1,9 @@
+from django.contrib.admin.views.decorators import staff_member_required
 from django.shortcuts import render
 
 # Create your views here.
 
+@staff_member_required(login_url='/login/?next=/promotions/')
 def promotions(request):
     """Promotions page.
     """
@@ -13,6 +15,7 @@ def promotions(request):
         }
     )
 
+@staff_member_required(login_url='/login/?next=/prm-discounts/')
 def discounts(request):
     """Discounts page.
     """
@@ -24,6 +27,7 @@ def discounts(request):
         }
     )
 
+@staff_member_required(login_url='/login/?next=/prm-promocodes/')
 def promocodes(request):
     """Promocodes page.
     """
@@ -35,6 +39,7 @@ def promocodes(request):
         }
     )
 
+@staff_member_required(login_url='/login/?next=/prm-badges/')
 def badges(request):
     """Badges page.
     """
@@ -46,6 +51,7 @@ def badges(request):
         }
     )
 
+@staff_member_required(login_url='/login/?next=/prm-advertising/')
 def advertising(request):
     """Advertising page.
     """
