@@ -51,6 +51,8 @@ urlpatterns = [
     
     url(r'^blank/$', uviews.blank, name='mv_admin_blank'),
     url(r'^login/$', athviews.signin, name='mv_admin_login'),
+    url(r'^logout/$', bviews.signout, name='mv_admin_logout'),
+
     url(r'^dashboard/$', dviews.dashboard, name='mv_admin_dashboard'),
 
     url(r'^users/$', usviews.users, name='mv_admin_users'),
@@ -94,7 +96,8 @@ urlpatterns = [
     url(r'^sec-permissions/$', secviews.permissions, name='mv_admin_sec_permissions'),
 
     url(r'^reports/$', rptviews.reports, name='mv_admin_reports'),
-]
+
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

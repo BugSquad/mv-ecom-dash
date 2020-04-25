@@ -19,6 +19,11 @@
   <!-- Custom styles for this template-->
   <link href="{% static "css/sb-admin.css" %}" rel="stylesheet">
 
+  {% if LANGUAGE_CODE == 'ar' %}
+    <link href="{% static "css/bootstrap-rtl.css" %}" rel="stylesheet">
+    <link href="{% static "css/sb-admin-rtl.css" %}" rel="stylesheet">  
+  {% endif %}
+
 </head>
 
 <body class="bg-dark">
@@ -27,35 +32,57 @@
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">{% trans Login %}</div>
       <div class="card-body">
+        {% if login_error %}
+          <div class="alert alert-danger alert-dismissible" ng-if="lc.loginError" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>{{ login_error_message }}
+          </div>
+        {% endif %}
+
         <form action="{% url 'mv_admin_login' %}" method="post">{% csrf_token %}
           <div class="form-group">
             <div class="form-label-group">
-              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
+              <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
               <label for="inputEmail">{% trans 'Email address' %}</label>
             </div>
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
-              <label for="inputPassword">{% trans Password %}</label>
+              <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required="required">
+              <label for="inputPassword">{% trans 'Password' %}</label>
             </div>
           </div>
           <div class="form-group">
             <div class="checkbox">
-              <label>
-                <input type="checkbox" value="remember-me">
-                {% trans 'Remember Password' %}
-              </label>
+              <input type="checkbox" id="rememberMe" name="remember_me" value="True" >
+              <label>{% trans 'Remember me' %}</label>
             </div>
           </div>
           <div class="form-group">
-            <div class="form-label-group">
-              <input type="submit" class="btn btn-primary btn-block" value="{% trans 'Login' %}">
-            </div>
+            <input type="submit" class="btn btn-primary btn-block" value="{% trans 'Login' %}">
           </div>
         </form>
         <div class="text-center">
-          <a class="d-block small" href="{% url 'mv_admin_forgot_password' %}">{% trans 'Forgot Password' %}?</a>
+          <a class="d-block small" href="{% url 'mv_admin_forgot_password' %}">{% trans 'Forgot Password ?' %}</a>
+        </div>
+        <div class="row m-3">
+          <div class="col text-center">
+            <a>
+              <form name="setLangEnglish" method="post" action="/i18n/setlang/">{% csrf_token %}
+                <input name="next" type="hidden" value="/" />
+                <input name="language" type="hidden" value="en"/>
+                <input name="submit" type="image" src="{{ MEDIA_URL }}/flags/english.png" alt="English" width="48" height="48">
+              </form>
+            </a>
+          </div>
+          <div class="col text-center">
+            <a>
+              <form name="setLangArabic" method="post" action="/i18n/setlang/">{% csrf_token %}
+                <input name="next" type="hidden" value="/" />
+                <input name="language" type="hidden" value="ar"/>
+                <input name="submit" type="image" src="{{ MEDIA_URL }}/flags/arabic.png" alt="Arabic" width="48" height="48">
+              </form>
+            </a>
+          </div>
         </div>
       </div>
     </div>

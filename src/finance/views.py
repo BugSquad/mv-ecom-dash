@@ -1,7 +1,9 @@
+from django.contrib.admin.views.decorators import staff_member_required
 from django.shortcuts import render
 
 # Create your views here.
 
+@staff_member_required(login_url='/login/?next=/finance/')
 def finance(request):
     """Finance page.
     """
@@ -13,6 +15,7 @@ def finance(request):
         }
     )
 
+@staff_member_required(login_url='/login/?next=/fin-orders/')
 def orders(request):
     """Orders page.
     """
@@ -24,6 +27,7 @@ def orders(request):
         }
     )
 
+@staff_member_required(login_url='/login/?next=/fin-payments/')
 def payments(request):
     """Payments page.
     """
@@ -35,6 +39,7 @@ def payments(request):
         }
     )
 
+@staff_member_required(login_url='/login/?next=/fin-delivery/')
 def delivery(request):
     """Delivery page.
     """
@@ -46,6 +51,7 @@ def delivery(request):
         }
     )
 
+@staff_member_required(login_url='/login/?next=/fin-returns/')
 def returns(request):
     """Returns page.
     """
@@ -57,6 +63,7 @@ def returns(request):
         }
     )
 
+@staff_member_required(login_url='/login/?next=/fin-refunds/')
 def refunds(request):
     """Refunds page.
     """
@@ -68,6 +75,7 @@ def refunds(request):
         }
     )
 
+@staff_member_required(login_url='/login/?next=/fin-methods/')
 def methods(request):
     """Methods page.
     """

@@ -1,7 +1,9 @@
+from django.contrib.admin.views.decorators import staff_member_required
 from django.shortcuts import render
 
 # Create your views here.
 
+@staff_member_required(login_url='/login/?next=/services/')
 def services(request):
     """Services page.
     """
@@ -13,6 +15,7 @@ def services(request):
         }
     )
 
+@staff_member_required(login_url='/login/?next=/srv-categories/')
 def categories(request):
     """Categories page.
     """
@@ -24,6 +27,7 @@ def categories(request):
         }
     )
 
+@staff_member_required(login_url='/login/?next=/srv-providers/')
 def providers(request):
     """Providers page.
     """

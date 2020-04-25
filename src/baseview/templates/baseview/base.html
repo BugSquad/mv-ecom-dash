@@ -15,7 +15,7 @@
   <link href="{% static "css/sb-admin.min.css" %}" rel="stylesheet">
 
   {% if LANGUAGE_CODE == 'ar' %}
-    <link href="{% static "css/bootstrap-rtl.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/bootstrap-rtl.css" %}" rel="stylesheet">
     <link href="{% static "css/sb-admin-rtl.css" %}" rel="stylesheet">  
   {% endif %}
 
@@ -115,7 +115,13 @@
         <a class="dropdown-item" href="#">{% trans "Settings" %}</a>
         <a class="dropdown-item" href="#">{% trans "Activity Log" %}</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">{% trans "Logout" %}</a>
+        <a>
+          <form name="LogoutUser" method="post" action="{% url "mv_admin_logout" %}">{% csrf_token %}
+            <input name="next" type="hidden" value="/" />
+            <input type="hidden" name="language" value="en"/>
+            <input class="dropdown-item" type="submit" alt="Logout" name="submit" value="{% trans "Logout" %}"/>
+          </form>
+        </a>
       </div>
     </li>
   </ul>
