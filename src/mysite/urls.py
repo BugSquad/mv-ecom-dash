@@ -36,21 +36,26 @@ import support.views as spviews
 import security.views as secviews
 import reports.views as rptviews
 
+from authorization.templates_views.reset_password_view import ResetPasswordRequestView
+from authorization.templates_views.change_password_view import PasswordResetConfirmView
+
 urlpatterns = [
     url(r'^(?P<filename>(robots.txt)|(humans.txt))$',
         bviews.robots_txt, name='robots-files'),
 
     url(r'^i18n/', include('django.conf.urls.i18n')),
 
-    url(r'^$', athviews.signin, name='mv_admin_start'),
+    url(r'^blank/$', uviews.blank, name='mv_admin_blank'),
 
-    path('forgot_password/', TemplateView.as_view(
+    path('forgot_password/', ResetPasswordRequestView.as_view(
         template_name="authorization/forgot_password.html"),
         name='mv_admin_forgot_password'
     ),
     
-    url(r'^blank/$', uviews.blank, name='mv_admin_blank'),
+    url(r'^$', athviews.signin, name='mv_admin_start'),
     url(r'^login/$', athviews.signin, name='mv_admin_login'),
+    url(r'^change_password/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$', PasswordResetConfirmView.as_view(template_name="authorization/change_password.html"), name='mv_admin_change_pass'),
+
     url(r'^logout/$', bviews.signout, name='mv_admin_logout'),
 
     url(r'^dashboard/$', dviews.dashboard, name='mv_admin_dashboard'),

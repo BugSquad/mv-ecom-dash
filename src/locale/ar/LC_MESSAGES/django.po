@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-25 14:08+0000\n"
-"PO-Revision-Date: 2020-04-25 16:09+0200\n"
+"POT-Creation-Date: 2020-04-26 12:07+0000\n"
+"PO-Revision-Date: 2020-04-26 14:08+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -31,31 +31,54 @@ msgstr "الصلاحيات"
 msgid "Important dates"
 msgstr "تواريخ مهمة"
 
+#: authorization/forms/change_password_form.py:10
+msgid "The two password fields didn't match."
+msgstr "كلمتي السر لا تتطابقان."
+
 #: authorization/models.py:44
 msgid "email address"
 msgstr "البريد الاليكتروني"
 
+#: authorization/templates/authorization/change_password.html:14
 #: authorization/templates/authorization/forgot_password.html:14
-#: authorization/templates/authorization/forgot_password.html:31
 msgid "Forgot your password"
 msgstr "نسيت كلمة المرور"
 
-#: authorization/templates/authorization/forgot_password.html:28
-#: authorization/templates/authorization/forgot_password.html:41
+#: authorization/templates/authorization/change_password.html:33
+#: authorization/templates/authorization/change_password.html:46
+msgid "Change Password"
+msgstr "تغيير كلمة المرور"
+
+#: authorization/templates/authorization/change_password.html:52
+msgid "Enter new password"
+msgstr "ادخل كلمة المرور الجديدة"
+
+#: authorization/templates/authorization/change_password.html:58
+msgid "Confirm new password"
+msgstr "أعد ادخال كلمة المرور الجديدة"
+
+#: authorization/templates/authorization/change_password.html:62
+#: authorization/templates/authorization/forgot_password.html:33
+#: authorization/templates/authorization/forgot_password.html:57
 msgid "Reset Password"
 msgstr "تغيير كلمة المرور"
 
-#: authorization/templates/authorization/forgot_password.html:32
+#: authorization/templates/authorization/forgot_password.html:46
+#: authorization/templates/authorization/login.html:65
+msgid "Forgot Password ?"
+msgstr "نسيت كلمة المرور ؟"
+
+#: authorization/templates/authorization/forgot_password.html:47
 msgid ""
 "Enter your email address and we will send you instructions on how to reset "
 "your password."
 msgstr "أدخل بريدك الإليكتروني وسوف نرسل لك التعليمات لإعادة ضبط كلمة المرور."
 
-#: authorization/templates/authorization/forgot_password.html:38
+#: authorization/templates/authorization/forgot_password.html:53
 msgid "Enter email address"
 msgstr "أدخل بريدك الإليكتروني"
 
-#: authorization/templates/authorization/forgot_password.html:44
+#: authorization/templates/authorization/forgot_password.html:61
 #: authorization/templates/authorization/login.html:61
 msgid "Login"
 msgstr "تسجيل الدخول"
@@ -72,9 +95,50 @@ msgstr "كلمة المرور"
 msgid "Remember me"
 msgstr "تذكرني"
 
-#: authorization/templates/authorization/login.html:65
-msgid "Forgot Password ?"
-msgstr "نسيت كلمة المرور ؟"
+#: authorization/templates/authorization/password_reset_email.html:2
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+"وصلتك هذه الرسالة لأنك طلبت تغيير كلمة المرور الخاصة بك على %(site_name)s ."
+
+#: authorization/templates/authorization/password_reset_email.html:4
+msgid "Please click and follow the link below and choose a new password:"
+msgstr "من فضلك، اضغط على الرابط التالي لاختيار كلمة مرور جديدة:"
+
+#: authorization/templates/authorization/password_reset_email.html:9
+msgid "Thanks for using our site!"
+msgstr "شكرا لاستخدامك موقعنا!"
+
+#: authorization/templates/authorization/password_reset_email.html:11
+#, python-format
+msgid "The %(site_name)s team"
+msgstr "فريق موقع %(site_name)s"
+
+#: authorization/templates_views/change_password_view.py:39
+msgid "Password has been reset."
+msgstr "تم تغيير كلمة المرور."
+
+#: authorization/templates_views/change_password_view.py:43
+msgid "Password reset failed.."
+msgstr "خطأ عند تغيير كلمة المرور.."
+
+#: authorization/templates_views/change_password_view.py:47
+msgid "The reset password link is no longer valid."
+msgstr "رابط تغيير كلمة المرور لم يعد صالحا للاستخدام."
+
+#: authorization/templates_views/reset_password_view.py:67
+msgid "An email has been sent to "
+msgstr "تم إرسال بريد اليكتروني "
+
+#: authorization/templates_views/reset_password_view.py:67
+msgid ". Please check your inbox to continue reseting password."
+msgstr ". من فضلك، راجع صندوقك البريدي لاستكمال تغيير كلمة المرور."
+
+#: authorization/templates_views/reset_password_view.py:71
+msgid "Please enter a valid email address"
+msgstr "من فضلك، ادخل بريد إليكتروني صحيح"
 
 #: baseview/templates/baseview/base.html:11
 msgid "MV Ecom Admin Dashboard"
@@ -268,11 +332,11 @@ msgstr "أقسام المتاجر"
 msgid "Statistics Overview"
 msgstr "إحصائيات عامة"
 
-#: mysite/settings.py:132
+#: mysite/settings.py:142
 msgid "English"
 msgstr "الإنجليزية"
 
-#: mysite/settings.py:133
+#: mysite/settings.py:143
 msgid "Arabic"
 msgstr "العربية"
 
@@ -313,6 +377,3 @@ msgstr "مقدمو الخدمة"
 #: vendors/templates/vendors/mv_admin_vendors_ratings.html:8
 msgid "Vendors Ratings"
 msgstr "تقييمات التجار"
-
-#~ msgid "Wrong email or password"
-#~ msgstr "خطأ في البريد الاليكتروني أو كلمة المرور"
