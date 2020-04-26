@@ -23,7 +23,7 @@ def categories(request):
         request,
         "products/mv_admin_products_categories.html",
         {
-            "nav_active": "products categories"
+            "nav_active": "products"
         }
     )
 
@@ -35,6 +35,6 @@ def ratings(request):
         request,
         "products/mv_admin_products_ratings.html",
         {
-            "nav_active": "products ratings"
+            "nav_active": "products"
         }
     )

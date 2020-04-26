@@ -23,7 +23,7 @@ def orders(request):
         request,
         "finance/mv_admin_finance_orders.html",
         {
-            "nav_active": "orders"
+            "nav_active": "finance"
         }
     )
 
@@ -35,7 +35,7 @@ def payments(request):
         request,
         "finance/mv_admin_finance_payments.html",
         {
-            "nav_active": "payments"
+            "nav_active": "finance"
         }
     )
 
@@ -47,7 +47,7 @@ def delivery(request):
         request,
         "finance/mv_admin_finance_delivery.html",
         {
-            "nav_active": "delivery"
+            "nav_active": "finance"
         }
     )
 
@@ -59,7 +59,7 @@ def returns(request):
         request,
         "finance/mv_admin_finance_returns.html",
         {
-            "nav_active": "returns"
+            "nav_active": "finance"
         }
     )
 
@@ -71,7 +71,7 @@ def refunds(request):
         request,
         "finance/mv_admin_finance_refunds.html",
         {
-            "nav_active": "refunds"
+            "nav_active": "finance"
         }
     )
 
@@ -83,6 +83,6 @@ def methods(request):
         request,
         "finance/mv_admin_finance_methods.html",
         {
-            "nav_active": "payment methods"
+            "nav_active": "finance"
         }
     )

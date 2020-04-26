@@ -23,7 +23,7 @@ def groups(request):
         request,
         "security/mv_admin_security_groups.html",
         {
-            "nav_active": "security groups"
+            "nav_active": "security"
         }
     )
 
@@ -35,6 +35,6 @@ def permissions(request):
         request,
         "security/mv_admin_security_permissions.html",
         {
-            "nav_active": "security permissions"
+            "nav_active": "security"
         }
     )

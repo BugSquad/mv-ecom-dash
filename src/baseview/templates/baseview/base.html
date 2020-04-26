@@ -112,8 +112,9 @@
         <i class="fas fa-user-circle fa-fw"></i>
       </a>
       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-        <a class="dropdown-item" href="#">{% trans "Settings" %}</a>
-        <a class="dropdown-item" href="#">{% trans "Activity Log" %}</a>
+        <a class="dropdown-item" href="{% url "mv_admin_us_profile" %}">{% trans "Profile" %}</a>
+        <a class="dropdown-item" href="{% url "mv_admin_us_settings" %}">{% trans "Settings" %}</a>
+        <a class="dropdown-item" href="{% url "mv_admin_us_logs" %}">{% trans "Activity Log" %}</a>
         <div class="dropdown-divider"></div>
         <a>
           <form name="LogoutUser" method="post" action="{% url "mv_admin_logout" %}">{% csrf_token %}
@@ -133,19 +134,19 @@
   <!-- Sidebar -->
   <ul class="nav sidebar navbar-nav">
     {% block sb_admin_sidebar %}
-    <li class="nav-item active">
+    <li class="nav-item {% if nav_active == 'dashboard' %} active {% endif %}">
       <a class="nav-link" href="{% url "mv_admin_dashboard" %}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>{% trans "Dashboard" %}</span>
       </a>
     </li>
-    <li class="nav-item active">
+    <li class="nav-item {% if nav_active == 'users' %} active {% endif %}">
       <a class="nav-link" href="{% url "mv_admin_users" %}">
         <i class="fas fa-fw fa-user-friends"></i>
         <span>{% trans "Users" %}</span>
       </a>
     </li>
-    <li class="nav-item dropdown">
+    <li class="nav-item dropdown {% if nav_active == 'services' %} active {% endif %}">
       <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-fw fa-taxi"></i>
         <span>{% trans "Services" %}</span>
@@ -157,13 +158,13 @@
         <a class="dropdown-item" href="{% url "mv_admin_srv_providers" %}">{% trans "Providers" %}</a>
       </div>
     </li>
-    <li class="nav-item active">
+    <li class="nav-item {% if nav_active == 'customers' %} active {% endif %}">
       <a class="nav-link" href="{% url "mv_admin_customers" %}">
         <i class="fas fa-fw fa-user-check"></i>
         <span>{% trans "Customers" %}</span>
       </a>
     </li>
-    <li class="nav-item dropdown">
+    <li class="nav-item dropdown {% if nav_active == 'vendors' %} active {% endif %}">
       <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-fw fa-store"></i>
         <span>{% trans "Vendors" %}</span>
@@ -173,7 +174,7 @@
         <a class="dropdown-item" href="{% url "mv_admin_vnd_ratings" %}">{% trans "Ratings" %}</a>
       </div>
     </li>
-    <li class="nav-item dropdown">
+    <li class="nav-item dropdown {% if nav_active == 'companies' %} active {% endif %}">
       <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-fw fa-building"></i>
         <span>{% trans "Companies" %}</span>
@@ -183,7 +184,7 @@
         <a class="dropdown-item" href="{% url "mv_admin_companies" %}">{% trans "Shops" %}</a>
       </div>
     </li>
-    <li class="nav-item dropdown">
+    <li class="nav-item dropdown {% if nav_active == 'products' %} active {% endif %}">
       <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-fw fa-gifts"></i>
         <span>{% trans "Products" %}</span>
@@ -194,7 +195,7 @@
         <a class="dropdown-item" href="{% url "mv_admin_prd_ratings" %}">{% trans "Items" %}</a>
       </div>
     </li>
-    <li class="nav-item dropdown">
+    <li class="nav-item dropdown {% if nav_active == 'promotions' %} active {% endif %}">
       <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-fw fa-tags"></i>
         <span>{% trans "Promotions" %}</span>
@@ -207,7 +208,7 @@
         <a class="dropdown-item" href="{% url "mv_admin_promotions" %}">{% trans "Promotions" %}</a>
       </div>
     </li>
-    <li class="nav-item dropdown">
+    <li class="nav-item dropdown {% if nav_active == 'finance' %} active {% endif %}">
       <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-fw fa-cash-register"></i>
         <span>{% trans "Finance" %}</span>
@@ -222,7 +223,7 @@
         <a class="dropdown-item" href="{% url "mv_admin_fin_methods" %}">{% trans "Payment Methods" %}</a>
       </div>
     </li>
-    <li class="nav-item dropdown">
+    <li class="nav-item dropdown {% if nav_active == 'support' %} active {% endif %}">
       <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-fw fa-headset"></i>
         <span>{% trans "Support" %}</span>
@@ -233,7 +234,7 @@
         <a class="dropdown-item" href="{% url "mv_admin_spt_suggestions" %}">{% trans "Suggestions" %}</a>
       </div>
     </li>
-    <li class="nav-item dropdown">
+    <li class="nav-item dropdown {% if nav_active == 'security' %} active {% endif %}">
       <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-fw fa-user-lock"></i>
         <span>{% trans "Security" %}</span>
@@ -244,7 +245,7 @@
         <a class="dropdown-item" href="{% url "mv_admin_sec_permissions" %}">{% trans "Permissions" %}</a>
       </div>
     </li>
-    <li class="nav-item dropdown">
+    <li class="nav-item dropdown {% if nav_active == 'reports' %} active {% endif %}">
       <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-fw fa-file-alt"></i>
         <span>{% trans "Reports" %}</span>

@@ -23,7 +23,7 @@ def categories(request):
         request,
         "services/mv_admin_services_categories.html",
         {
-            "nav_active": "services categories"
+            "nav_active": "services"
         }
     )
 
@@ -35,6 +35,6 @@ def providers(request):
         request,
         "services/mv_admin_services_providers.html",
         {
-            "nav_active": "services providers"
+            "nav_active": "services"
         }
     )

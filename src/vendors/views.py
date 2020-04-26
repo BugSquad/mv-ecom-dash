@@ -23,6 +23,6 @@ def ratings(request):
         request,
         "vendors/mv_admin_vendors_ratings.html",
         {
-            "nav_active": "vendors ratings"
+            "nav_active": "vendors"
         }
     )

@@ -23,6 +23,6 @@ def categories(request):
         request,
         "companies/mv_admin_companies_categories.html",
         {
-            "nav_active": "companies categories"
+            "nav_active": "companies"
         }
     )

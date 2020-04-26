@@ -23,7 +23,7 @@ def complaints(request):
         request,
         "support/mv_admin_support_complaints.html",
         {
-            "nav_active": "complaints"
+            "nav_active": "support"
         }
     )
 
@@ -35,6 +35,6 @@ def suggestions(request):
         request,
         "support/mv_admin_support_suggestions.html",
         {
-            "nav_active": "suggestions"
+            "nav_active": "support"
         }
     )

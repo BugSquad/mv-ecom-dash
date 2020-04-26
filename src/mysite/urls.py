@@ -61,6 +61,9 @@ urlpatterns = [
     url(r'^dashboard/$', dviews.dashboard, name='mv_admin_dashboard'),
 
     url(r'^users/$', usviews.users, name='mv_admin_users'),
+    url(r'^us-profile/$', usviews.user_profile, name='mv_admin_us_profile'),
+    url(r'^us-settings/$', usviews.user_settings, name='mv_admin_us_settings'),
+    url(r'^us-logs/$', usviews.user_logs, name='mv_admin_us_logs'),
 
     url(r'^services/$', srviews.services, name='mv_admin_services'),
     url(r'^srv-categories/$', srviews.categories, name='mv_admin_srv_categories'),

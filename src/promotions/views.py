@@ -23,7 +23,7 @@ def discounts(request):
         request,
         "promotions/mv_admin_promotions_discounts.html",
         {
-            "nav_active": "discounts"
+            "nav_active": "promotions"
         }
     )
 
@@ -35,7 +35,7 @@ def promocodes(request):
         request,
         "promotions/mv_admin_promotions_promos.html",
         {
-            "nav_active": "promocodes"
+            "nav_active": "promotions"
         }
     )
 
@@ -47,7 +47,7 @@ def badges(request):
         request,
         "promotions/mv_admin_promotions_badges.html",
         {
-            "nav_active": "badges"
+            "nav_active": "promotions"
         }
     )
 
@@ -59,6 +59,6 @@ def advertising(request):
         request,
         "promotions/mv_admin_promotions_advertising.html",
         {
-            "nav_active": "advertising"
+            "nav_active": "promotions"
         }
     )
