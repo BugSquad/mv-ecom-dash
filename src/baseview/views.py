@@ -7,6 +7,7 @@ from django.conf import settings
 
 # Create your views here.
 
+
 @require_GET
 def robots_txt(request):
     lines = [
@@ -16,6 +17,7 @@ def robots_txt(request):
     ]
     return HttpResponse("\n".join(lines), content_type="text/plain")
 
+
 def signout(request):
     logout(request)
-    return redirect('/')
+    return redirect("/")

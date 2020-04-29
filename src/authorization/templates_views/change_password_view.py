@@ -7,12 +7,12 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class PasswordResetConfirmView(FormView):
-    success_url = '/login/'
+    success_url = "/login/"
     form_class = SetPasswordForm
 
     messages = {
-        'status': '',
-        'message':'',
+        "status": "",
+        "message": "",
     }
 
     def post(self, request, uidb64=None, token=None, *arg, **kwargs):
@@ -31,18 +31,18 @@ class PasswordResetConfirmView(FormView):
 
         if user is not None and default_token_generator.check_token(user, token):
             if form.is_valid():
-                new_password= form.cleaned_data['conf_password']
+                new_password = form.cleaned_data["conf_password"]
                 user.set_password(new_password)
                 user.save()
 
-                self.messages.status = 'success'
-                self.messages.messages = _('Password has been reset.')
+                self.messages.status = "success"
+                self.messages.messages = _("Password has been reset.")
                 return self.form_valid(form)
             else:
-                self.messages.status = 'failed'
-                self.messages.messages = _('Password reset failed..')
+                self.messages.status = "failed"
+                self.messages.messages = _("Password reset failed..")
                 return self.form_invalid(form)
         else:
-            self.messages.status = 'failed'
-            self.messages.messages = _('The reset password link is no longer valid.')
+            self.messages.status = "failed"
+            self.messages.messages = _("The reset password link is no longer valid.")
             return self.form_invalid(form)
