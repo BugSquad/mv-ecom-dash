@@ -1,8 +1,14 @@
+Created by [**Mohamad Abuzaid**](https://github.com/mohamad-abuzaid)
+
 # mv-ecom-dash
-An **Python-Django** Admin panel and a dashboard for a multi-vendor e-commerce website...</br>
+## OverView
+
+An **Python-Django** Admin panel and a dashboard for a multi-vendor e-commerce websites...</br>
 [**SB Admin**](https://startbootstrap.com/templates/sb-admin/) from **Start Bootstrap** is used for HTML templates.
 
 MV-Ecom Dasboard is an Admin panel built with Python Django to manage and control a **Multi Vendor E-commerce** platform with model simillar to Amazon or AliBaba. Where multiple sellers can register their shops and products for customers to view and make purchases.
+
+## Modules
 
 The project is built in modules as follows:</br></br>
     **1. Authorization:** Handles Login, Logout and Sessions creation.  
@@ -18,3 +24,6 @@ The project is built in modules as follows:</br></br>
     **11. Finance:** Manages all financial aspects. as: orders, payments and refunds.  
     **12. Support:** Manages customer services. as: suggestions and complaints.  
     **13. Reports:** Generate all required reports.  
+
+## Contributions
+
