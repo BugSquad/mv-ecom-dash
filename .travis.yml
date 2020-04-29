@@ -1,0 +1,23 @@
+# Disable sudo to speed up the build
+sudo: false
+
+# Set the build language to Python
+language: python
+
+# Set the python version to 3.6, 3.7 and 3.8
+python:
+  - "3.6"      # current default Python on Travis CI
+  - "3.7"
+  - "3.8"
+  
+# command to install dependencies
+install:
+  - pip install -r src/requirements.txt
+  
+# command to run tests
+script:
+  - pytest --cov=./
+
+# Push the results back to codecov
+after_success:
+  - codecov
