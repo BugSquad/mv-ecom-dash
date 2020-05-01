@@ -7,18 +7,12 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('authorization', '0001_initial'),
+        ("authorization", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterModelManagers(
-            name='mvuser',
-            managers=[
-                ('objects', authorization.models.UserManager()),
-            ],
+            name="mvuser", managers=[("objects", authorization.models.UserManager()),],
         ),
-        migrations.RemoveField(
-            model_name='mvuser',
-            name='username',
-        ),
+        migrations.RemoveField(model_name="mvuser", name="username",),
     ]

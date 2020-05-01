@@ -40,68 +40,65 @@ from authorization.templates_views.reset_password_view import ResetPasswordReque
 from authorization.templates_views.change_password_view import PasswordResetConfirmView
 
 urlpatterns = [
-    url(r'^(?P<filename>(robots.txt)|(humans.txt))$',
-        bviews.robots_txt, name='robots-files'),
-
-    url(r'^i18n/', include('django.conf.urls.i18n')),
-
-    url(r'^blank/$', uviews.blank, name='mv_admin_blank'),
-
-    path('forgot_password/', ResetPasswordRequestView.as_view(
-        template_name="authorization/forgot_password.html"),
-        name='mv_admin_forgot_password'
+    url(
+        r"^(?P<filename>(robots.txt)|(humans.txt))$",
+        bviews.robots_txt,
+        name="robots-files",
     ),
-    
-    url(r'^$', athviews.signin, name='mv_admin_start'),
-    url(r'^login/$', athviews.signin, name='mv_admin_login'),
-    url(r'^change_password/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$', PasswordResetConfirmView.as_view(template_name="authorization/change_password.html"), name='mv_admin_change_pass'),
-
-    url(r'^logout/$', bviews.signout, name='mv_admin_logout'),
-
-    url(r'^dashboard/$', dviews.dashboard, name='mv_admin_dashboard'),
-
-    url(r'^users/$', usviews.users, name='mv_admin_users'),
-
-    url(r'^services/$', srviews.services, name='mv_admin_services'),
-    url(r'^srv-categories/$', srviews.categories, name='mv_admin_srv_categories'),
-    url(r'^srv-providers/$', srviews.providers, name='mv_admin_srv_providers'),
-
-    url(r'^customers/$', cviews.customers, name='mv_admin_customers'),
-
-    url(r'^vendors/$', vdviews.vendors, name='mv_admin_vendors'),
-    url(r'^vnd-ratings/$', vdviews.ratings, name='mv_admin_vnd_ratings'),
-
-    url(r'^companies/$', cmviews.companies, name='mv_admin_companies'),
-    url(r'^cmp-categories/$', cmviews.categories, name='mv_admin_cmp_categories'),
-
-    url(r'^products/$', prviews.products, name='mv_admin_products'),
-    url(r'^prd-categories/$', prviews.categories, name='mv_admin_prd_categories'),
-    url(r'^prd-ratings/$', prviews.ratings, name='mv_admin_prd_ratings'),
-
-    url(r'^promotions/$', prmviews.promotions, name='mv_admin_promotions'),
-    url(r'^prm-discounts/$', prmviews.discounts, name='mv_admin_prm_discounts'),
-    url(r'^prm-promocodes/$', prmviews.promocodes, name='mv_admin_prm_promocodes'),
-    url(r'^prm-badges/$', prmviews.badges, name='mv_admin_prm_badges'),
-    url(r'^prm-advertising/$', prmviews.advertising, name='mv_admin_prm_advertising'),
-
-    url(r'^finance/$', fviews.finance, name='mv_admin_finance'),
-    url(r'^fin-orders/$', fviews.orders, name='mv_admin_fin_orders'),
-    url(r'^fin-payments/$', fviews.payments, name='mv_admin_fin_payments'),
-    url(r'^fin-delivery/$', fviews.delivery, name='mv_admin_fin_delivery'),
-    url(r'^fin-returns/$', fviews.returns, name='mv_admin_fin_returns'),
-    url(r'^fin-refunds/$', fviews.refunds, name='mv_admin_fin_refunds'),
-    url(r'^fin-methods/$', fviews.methods, name='mv_admin_fin_methods'),
-
-    url(r'^support/$', spviews.support, name='mv_admin_support'),
-    url(r'^spt-complaints/$', spviews.complaints, name='mv_admin_spt_complaints'),
-    url(r'^spt-suggestions/$', spviews.suggestions, name='mv_admin_spt_suggestions'),
-
-    url(r'^security/$', secviews.security, name='mv_admin_security'),
-    url(r'^sec-groups/$', secviews.groups, name='mv_admin_sec_groups'),
-    url(r'^sec-permissions/$', secviews.permissions, name='mv_admin_sec_permissions'),
-
-    url(r'^reports/$', rptviews.reports, name='mv_admin_reports'),
-
+    url(r"^i18n/", include("django.conf.urls.i18n")),
+    url(r"^blank/$", uviews.blank, name="mv_admin_blank"),
+    path(
+        "forgot_password/",
+        ResetPasswordRequestView.as_view(
+            template_name="authorization/forgot_password.html"
+        ),
+        name="mv_admin_forgot_password",
+    ),
+    url(r"^$", athviews.signin, name="mv_admin_start"),
+    url(r"^login/$", athviews.signin, name="mv_admin_login"),
+    url(
+        r"^change_password/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$",
+        PasswordResetConfirmView.as_view(
+            template_name="authorization/change_password.html"
+        ),
+        name="mv_admin_change_pass",
+    ),
+    url(r"^logout/$", bviews.signout, name="mv_admin_logout"),
+    url(r"^dashboard/$", dviews.dashboard, name="mv_admin_dashboard"),
+    url(r"^users/$", usviews.users, name="mv_admin_users"),
+    url(r"^us-profile/$", usviews.user_profile, name="mv_admin_us_profile"),
+    url(r"^us-settings/$", usviews.user_settings, name="mv_admin_us_settings"),
+    url(r"^us-logs/$", usviews.user_logs, name="mv_admin_us_logs"),
+    url(r"^services/$", srviews.services, name="mv_admin_services"),
+    url(r"^srv-categories/$", srviews.categories, name="mv_admin_srv_categories"),
+    url(r"^srv-providers/$", srviews.providers, name="mv_admin_srv_providers"),
+    url(r"^customers/$", cviews.customers, name="mv_admin_customers"),
+    url(r"^vendors/$", vdviews.vendors, name="mv_admin_vendors"),
+    url(r"^vnd-ratings/$", vdviews.ratings, name="mv_admin_vnd_ratings"),
+    url(r"^companies/$", cmviews.companies, name="mv_admin_companies"),
+    url(r"^cmp-categories/$", cmviews.categories, name="mv_admin_cmp_categories"),
+    url(r"^products/$", prviews.products, name="mv_admin_products"),
+    url(r"^prd-categories/$", prviews.categories, name="mv_admin_prd_categories"),
+    url(r"^prd-ratings/$", prviews.ratings, name="mv_admin_prd_ratings"),
+    url(r"^promotions/$", prmviews.promotions, name="mv_admin_promotions"),
+    url(r"^prm-discounts/$", prmviews.discounts, name="mv_admin_prm_discounts"),
+    url(r"^prm-promocodes/$", prmviews.promocodes, name="mv_admin_prm_promocodes"),
+    url(r"^prm-badges/$", prmviews.badges, name="mv_admin_prm_badges"),
+    url(r"^prm-advertising/$", prmviews.advertising, name="mv_admin_prm_advertising"),
+    url(r"^finance/$", fviews.finance, name="mv_admin_finance"),
+    url(r"^fin-orders/$", fviews.orders, name="mv_admin_fin_orders"),
+    url(r"^fin-payments/$", fviews.payments, name="mv_admin_fin_payments"),
+    url(r"^fin-delivery/$", fviews.delivery, name="mv_admin_fin_delivery"),
+    url(r"^fin-returns/$", fviews.returns, name="mv_admin_fin_returns"),
+    url(r"^fin-refunds/$", fviews.refunds, name="mv_admin_fin_refunds"),
+    url(r"^fin-methods/$", fviews.methods, name="mv_admin_fin_methods"),
+    url(r"^support/$", spviews.support, name="mv_admin_support"),
+    url(r"^spt-complaints/$", spviews.complaints, name="mv_admin_spt_complaints"),
+    url(r"^spt-suggestions/$", spviews.suggestions, name="mv_admin_spt_suggestions"),
+    url(r"^security/$", secviews.security, name="mv_admin_security"),
+    url(r"^sec-groups/$", secviews.groups, name="mv_admin_sec_groups"),
+    url(r"^sec-permissions/$", secviews.permissions, name="mv_admin_sec_permissions"),
+    url(r"^reports/$", rptviews.reports, name="mv_admin_reports"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
