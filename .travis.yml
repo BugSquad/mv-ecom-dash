@@ -16,7 +16,7 @@ install:
   
 # command to run tests
 script:
-  - pytest --rootdir=$HOME/build/BugSquad/mv-ecom-dash/src --cov=./
+  - pytest --cov=./
 
 # Push the results back to codecov
 after_success:
