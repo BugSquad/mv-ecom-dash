@@ -81,6 +81,34 @@
             <input class="dropdown-item" type="submit" alt="Arabic" name="submit" value="العربية"/>
           </form>
         </a>
+        <a>
+          <form name="setLangSpanish" method="post" action="/i18n/setlang/">{% csrf_token %}
+            <input name="next" type="hidden" value="/" />
+            <input type="hidden" name="language" value="es"/>
+            <input class="dropdown-item" type="submit" alt="Spanish" name="submit" value="Español"/>
+          </form>
+        </a>
+        <a>
+          <form name="setLangGerman" method="post" action="/i18n/setlang/">{% csrf_token %}
+            <input name="next" type="hidden" value="/" />
+            <input type="hidden" name="language" value="de"/>
+            <input class="dropdown-item" type="submit" alt="German" name="submit" value="Deutsch"/>
+          </form>
+        </a>
+        <a>
+          <form name="setLangFrench" method="post" action="/i18n/setlang/">{% csrf_token %}
+            <input name="next" type="hidden" value="/" />
+            <input type="hidden" name="language" value="fr"/>
+            <input class="dropdown-item" type="submit" alt="French" name="submit" value="français"/>
+          </form>
+        </a>
+        <a>
+          <form name="setLangItalian" method="post" action="/i18n/setlang/">{% csrf_token %}
+            <input name="next" type="hidden" value="/" />
+            <input type="hidden" name="language" value="it"/>
+            <input class="dropdown-item" type="submit" alt="Italian" name="submit" value="Italiano"/>
+          </form>
+        </a>
       </div>
     </li>
     <li class="nav-item dropdown no-arrow mx-2">
@@ -192,7 +220,7 @@
       <div class="dropdown-menu" aria-labelledby="pagesDropdown">
         <a class="dropdown-item" href="{% url "mv_admin_prd_categories" %}">{% trans "Categories" %}</a>
         <a class="dropdown-item" href="{% url "mv_admin_products" %}">{% trans "Items" %}</a>
-        <a class="dropdown-item" href="{% url "mv_admin_prd_ratings" %}">{% trans "Items" %}</a>
+        <a class="dropdown-item" href="{% url "mv_admin_prd_ratings" %}">{% trans "Ratings" %}</a>
       </div>
     </li>
     <li class="nav-item dropdown {% if nav_active == 'promotions' %} active {% endif %}">
