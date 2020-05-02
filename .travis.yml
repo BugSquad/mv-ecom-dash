@@ -16,7 +16,7 @@ install:
   
 # command to run tests
 script:
-  - pytest src/ --cov=./
+  - pytest --rootdir=/src --cov=./
 
 # Push the results back to codecov
 after_success:
