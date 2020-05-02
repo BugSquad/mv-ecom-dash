@@ -3,100 +3,99 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-02 07:23+0000\n"
-"PO-Revision-Date: 2020-05-02 09:25+0200\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: ar\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Poedit 2.3\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: authorization/admin.py:16
 msgid "Personal info"
-msgstr "البيانات الشخصية"
+msgstr ""
 
 #: authorization/admin.py:18 baseview/templates/baseview/base.html:274
 #: security/templates/security/mv_admin_security_permissions.html:2
 #: security/templates/security/mv_admin_security_permissions.html:5
 msgid "Permissions"
-msgstr "الصلاحيات"
+msgstr ""
 
 #: authorization/admin.py:29
 msgid "Important dates"
-msgstr "تواريخ مهمة"
+msgstr ""
 
 #: authorization/forms/change_password_form.py:12
 msgid "The two password fields didn't match."
-msgstr "كلمتي السر لا تتطابقان."
+msgstr ""
 
 #: authorization/models.py:46
 msgid "email address"
-msgstr "البريد الاليكتروني"
+msgstr ""
 
 #: authorization/templates/authorization/change_password.html:14
 #: authorization/templates/authorization/forgot_password.html:14
 msgid "Forgot your password"
-msgstr "نسيت كلمة المرور"
+msgstr ""
 
 #: authorization/templates/authorization/change_password.html:33
 #: authorization/templates/authorization/change_password.html:46
 msgid "Change Password"
-msgstr "تغيير كلمة المرور"
+msgstr ""
 
 #: authorization/templates/authorization/change_password.html:52
 msgid "Enter new password"
-msgstr "ادخل كلمة المرور الجديدة"
+msgstr ""
 
 #: authorization/templates/authorization/change_password.html:58
 msgid "Confirm new password"
-msgstr "أعد ادخال كلمة المرور الجديدة"
+msgstr ""
 
 #: authorization/templates/authorization/change_password.html:62
 #: authorization/templates/authorization/forgot_password.html:33
 #: authorization/templates/authorization/forgot_password.html:57
 msgid "Reset Password"
-msgstr "تغيير كلمة المرور"
+msgstr ""
 
 #: authorization/templates/authorization/forgot_password.html:46
 #: authorization/templates/authorization/login.html:65
 msgid "Forgot Password ?"
-msgstr "نسيت كلمة المرور ؟"
+msgstr ""
 
 #: authorization/templates/authorization/forgot_password.html:47
 msgid ""
 "Enter your email address and we will send you instructions on how to reset "
 "your password."
-msgstr "أدخل بريدك الإليكتروني وسوف نرسل لك التعليمات لإعادة ضبط كلمة المرور."
+msgstr ""
 
 #: authorization/templates/authorization/forgot_password.html:53
 msgid "Enter email address"
-msgstr "أدخل بريدك الإليكتروني"
+msgstr ""
 
 #: authorization/templates/authorization/forgot_password.html:61
 #: authorization/templates/authorization/login.html:33
 #: authorization/templates/authorization/login.html:61
 msgid "Login"
-msgstr "تسجيل الدخول"
+msgstr ""
 
 #: authorization/templates/authorization/login.html:45
 msgid "Email address"
-msgstr "البريد الاليكتروني"
+msgstr ""
 
 #: authorization/templates/authorization/login.html:51
 msgid "Password"
-msgstr "كلمة المرور"
+msgstr ""
 
 #: authorization/templates/authorization/login.html:57
 msgid "Remember me"
-msgstr "تذكرني"
+msgstr ""
 
 #: authorization/templates/authorization/password_reset_email.html:2
 #, python-format
@@ -104,111 +103,110 @@ msgid ""
 "You're receiving this email because you requested a password reset for your "
 "user account at %(site_name)s."
 msgstr ""
-"وصلتك هذه الرسالة لأنك طلبت تغيير كلمة المرور الخاصة بك على %(site_name)s ."
 
 #: authorization/templates/authorization/password_reset_email.html:4
 msgid "Please click and follow the link below and choose a new password:"
-msgstr "من فضلك، اضغط على الرابط التالي لاختيار كلمة مرور جديدة:"
+msgstr ""
 
 #: authorization/templates/authorization/password_reset_email.html:9
 msgid "Thanks for using our site!"
-msgstr "شكرا لاستخدامك موقعنا!"
+msgstr ""
 
 #: authorization/templates/authorization/password_reset_email.html:11
 #, python-format
 msgid "The %(site_name)s team"
-msgstr "فريق موقع %(site_name)s"
+msgstr ""
 
 #: authorization/templates_views/change_password_view.py:39
 msgid "Password has been reset."
-msgstr "تم تغيير كلمة المرور."
+msgstr ""
 
 #: authorization/templates_views/change_password_view.py:43
 msgid "Password reset failed.."
-msgstr "خطأ عند تغيير كلمة المرور.."
+msgstr ""
 
 #: authorization/templates_views/change_password_view.py:47
 msgid "The reset password link is no longer valid."
-msgstr "رابط تغيير كلمة المرور لم يعد صالحا للاستخدام."
+msgstr ""
 
 #: authorization/templates_views/reset_password_view.py:75
 msgid "An email has been sent to "
-msgstr "تم إرسال بريد اليكتروني "
+msgstr ""
 
 #: authorization/templates_views/reset_password_view.py:77
 msgid ". Please check your inbox to continue reseting password."
-msgstr ". من فضلك، راجع صندوقك البريدي لاستكمال تغيير كلمة المرور."
+msgstr ""
 
 #: authorization/templates_views/reset_password_view.py:82
 msgid "Please enter a valid email address"
-msgstr "من فضلك، ادخل بريد إليكتروني صحيح"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:11
 msgid "MV Ecom Admin Dashboard"
-msgstr "لوحة تحكم سوق متعدد المتاجر"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:39
 #: baseview/templates/baseview/base.html:298
 msgid "MV Ecom Admin"
-msgstr "مدير السوق"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:47
 msgid "Search for..."
-msgstr "ابحث عن…."
+msgstr ""
 
 #: baseview/templates/baseview/base.html:47
 msgid "Search"
-msgstr "ابحث"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:120
 #: baseview/templates/baseview/base.html:132
 msgid "Action"
-msgstr "إجراء"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:121
 #: baseview/templates/baseview/base.html:133
 msgid "Another action"
-msgstr "إجراء آخر"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:123
 #: baseview/templates/baseview/base.html:135
 msgid "Something else here"
-msgstr "شيء آخر هنا"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:143
 #: users/templates/users/mv_admin_users_profile.html:2
 #: users/templates/users/mv_admin_users_profile.html:5
 #: users/templates/users/mv_admin_users_profile.html:8
 msgid "Profile"
-msgstr "الملف الشخصي"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:144
 #: users/templates/users/mv_admin_users_settings.html:2
 #: users/templates/users/mv_admin_users_settings.html:5
 #: users/templates/users/mv_admin_users_settings.html:8
 msgid "Settings"
-msgstr "الإعدادات"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:145
 msgid "Activity Log"
-msgstr "سِجل النشاط"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:151
 msgid "Logout"
-msgstr "تسجيل الخروج"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:168
 #: dashboard/templates/dashboard/mv_admin_dashboard.html:2
 #: dashboard/templates/dashboard/mv_admin_dashboard.html:6
 msgid "Dashboard"
-msgstr "اللوحة الرئيسية"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:174
 #: users/templates/users/mv_admin_users.html:2
 #: users/templates/users/mv_admin_users.html:5
 #: users/templates/users/mv_admin_users.html:8
 msgid "Users"
-msgstr "المستخدمون"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:180
 #: baseview/templates/baseview/base.html:185
@@ -216,24 +214,24 @@ msgstr "المستخدمون"
 #: services/templates/services/mv_admin_services.html:5
 #: services/templates/services/mv_admin_services.html:8
 msgid "Services"
-msgstr "الخدمات"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:186
 #: baseview/templates/baseview/base.html:212
 #: baseview/templates/baseview/base.html:222
 msgid "Categories"
-msgstr "الأقسام"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:187
 msgid "Providers"
-msgstr "مقدمو الخدمة"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:193
 #: customers/templates/customers/mv_admin_customers.html:2
 #: customers/templates/customers/mv_admin_customers.html:5
 #: customers/templates/customers/mv_admin_customers.html:8
 msgid "Customers"
-msgstr "العملاء"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:199
 #: baseview/templates/baseview/base.html:202
@@ -241,34 +239,34 @@ msgstr "العملاء"
 #: vendors/templates/vendors/mv_admin_vendors.html:5
 #: vendors/templates/vendors/mv_admin_vendors.html:8
 msgid "Vendors"
-msgstr "التجار"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:203
 #: baseview/templates/baseview/base.html:224
 msgid "Ratings"
-msgstr "التقييمات"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:209
 msgid "Companies"
-msgstr "الشركات"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:213
 #: companies/templates/companies/mv_admin_companies.html:2
 #: companies/templates/companies/mv_admin_companies.html:5
 #: companies/templates/companies/mv_admin_companies.html:8
 msgid "Shops"
-msgstr "المتاجر"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:219
 #: products/templates/products/mv_admin_products.html:2
 #: products/templates/products/mv_admin_products.html:5
 #: products/templates/products/mv_admin_products.html:8
 msgid "Products"
-msgstr "المنتجات"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:223
 msgid "Items"
-msgstr "المنتجات"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:230
 #: baseview/templates/baseview/base.html:237
@@ -276,214 +274,214 @@ msgstr "المنتجات"
 #: promotions/templates/promotions/mv_admin_promotions.html:5
 #: promotions/templates/promotions/mv_admin_promotions.html:8
 msgid "Promotions"
-msgstr "الترقيات"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:233
 #: promotions/templates/promotions/mv_admin_promotions_discounts.html:2
 #: promotions/templates/promotions/mv_admin_promotions_discounts.html:5
 #: promotions/templates/promotions/mv_admin_promotions_discounts.html:8
 msgid "Discounts"
-msgstr "التخفيضات"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:234
 msgid "Promo-codes"
-msgstr "قسائم الشراء"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:235
 #: promotions/templates/promotions/mv_admin_promotions_badges.html:2
 #: promotions/templates/promotions/mv_admin_promotions_badges.html:5
 #: promotions/templates/promotions/mv_admin_promotions_badges.html:8
 msgid "Badges"
-msgstr "الشعارات"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:236
 #: promotions/templates/promotions/mv_admin_promotions_advertising.html:2
 #: promotions/templates/promotions/mv_admin_promotions_advertising.html:5
 #: promotions/templates/promotions/mv_admin_promotions_advertising.html:8
 msgid "Advertising"
-msgstr "الإعلانات"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:243
 #: finance/templates/finance/mv_admin_finance.html:2
 #: finance/templates/finance/mv_admin_finance.html:5
 #: finance/templates/finance/mv_admin_finance.html:8
 msgid "Finance"
-msgstr "الماليات"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:246
 #: baseview/templates/baseview/base.html:261
 #: baseview/templates/baseview/base.html:272
 #: baseview/templates/baseview/base.html:283
 msgid "Overview"
-msgstr "نظرة عامة"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:247
 #: finance/templates/finance/mv_admin_finance_orders.html:2
 #: finance/templates/finance/mv_admin_finance_orders.html:5
 #: finance/templates/finance/mv_admin_finance_orders.html:8
 msgid "Orders"
-msgstr "الطلبات"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:248
 #: finance/templates/finance/mv_admin_finance_payments.html:2
 #: finance/templates/finance/mv_admin_finance_payments.html:5
 #: finance/templates/finance/mv_admin_finance_payments.html:8
 msgid "Payments"
-msgstr "المدفوعات"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:249
 #: finance/templates/finance/mv_admin_finance_delivery.html:2
 #: finance/templates/finance/mv_admin_finance_delivery.html:5
 #: finance/templates/finance/mv_admin_finance_delivery.html:8
 msgid "Delivery"
-msgstr "عمليات التوصيل"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:250
 #: finance/templates/finance/mv_admin_finance_returns.html:2
 #: finance/templates/finance/mv_admin_finance_returns.html:5
 #: finance/templates/finance/mv_admin_finance_returns.html:8
 msgid "Returns"
-msgstr "المرتجعات"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:251
 #: finance/templates/finance/mv_admin_finance_refunds.html:2
 #: finance/templates/finance/mv_admin_finance_refunds.html:5
 #: finance/templates/finance/mv_admin_finance_refunds.html:8
 msgid "Refunds"
-msgstr "المبالغ المستردة"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:252
 #: finance/templates/finance/mv_admin_finance_methods.html:2
 #: finance/templates/finance/mv_admin_finance_methods.html:5
 #: finance/templates/finance/mv_admin_finance_methods.html:8
 msgid "Payment Methods"
-msgstr "طرق الدفع"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:258
 #: support/templates/support/mv_admin_support.html:2
 #: support/templates/support/mv_admin_support.html:5
 #: support/templates/support/mv_admin_support.html:8
 msgid "Support"
-msgstr "الدعم الفني"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:262
 #: support/templates/support/mv_admin_support_complaints.html:2
 #: support/templates/support/mv_admin_support_complaints.html:5
 #: support/templates/support/mv_admin_support_complaints.html:8
 msgid "Complaints"
-msgstr "الشكاوى"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:263
 #: support/templates/support/mv_admin_support_suggestions.html:2
 #: support/templates/support/mv_admin_support_suggestions.html:5
 #: support/templates/support/mv_admin_support_suggestions.html:8
 msgid "Suggestions"
-msgstr "المقترحات"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:269
 #: security/templates/security/mv_admin_security.html:2
 #: security/templates/security/mv_admin_security.html:5
 #: security/templates/security/mv_admin_security.html:8
 msgid "Security"
-msgstr "الأمن والحماية"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:273
 #: security/templates/security/mv_admin_security_groups.html:2
 #: security/templates/security/mv_admin_security_groups.html:5
 msgid "Groups"
-msgstr "المجموعات"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:280
 #: reports/templates/reports/mv_admin_reports.html:2
 #: reports/templates/reports/mv_admin_reports.html:5
 #: reports/templates/reports/mv_admin_reports.html:8
 msgid "Reports"
-msgstr "التقارير"
+msgstr ""
 
 #: baseview/templates/baseview/base.html:312
 msgid "Copyright © bugsquad.co 2020"
-msgstr "جميع الحقوق محفوظة © bugsquad.co 2020"
+msgstr ""
 
 #: companies/templates/companies/mv_admin_companies_categories.html:2
 #: companies/templates/companies/mv_admin_companies_categories.html:5
 #: companies/templates/companies/mv_admin_companies_categories.html:8
 msgid "Shops Categories"
-msgstr "أقسام المتاجر"
+msgstr ""
 
 #: dashboard/templates/dashboard/mv_admin_dashboard.html:3
 msgid "Statistics Overview"
-msgstr "إحصائيات عامة"
+msgstr ""
 
 #: mysite/settings.py:135
 msgid "English"
-msgstr "الإنجليزية"
+msgstr ""
 
 #: mysite/settings.py:136
 msgid "Arabic"
-msgstr "العربية"
+msgstr ""
 
 #: mysite/settings.py:137
 msgid "Spanish"
-msgstr "الإسبانية"
+msgstr ""
 
 #: mysite/settings.py:138
 msgid "Italian"
-msgstr "الإيطالية"
+msgstr ""
 
 #: mysite/settings.py:139
 msgid "German"
-msgstr "الألمانية"
+msgstr ""
 
 #: mysite/settings.py:140
 msgid "French"
-msgstr "الفرنسية"
+msgstr ""
 
 #: products/templates/products/mv_admin_products_categories.html:2
 #: products/templates/products/mv_admin_products_categories.html:5
 #: products/templates/products/mv_admin_products_categories.html:8
 msgid "Products Categories"
-msgstr "أقسام المنتجات"
+msgstr ""
 
 #: products/templates/products/mv_admin_products_ratings.html:2
 #: products/templates/products/mv_admin_products_ratings.html:5
 #: products/templates/products/mv_admin_products_ratings.html:8
 msgid "Products Ratings"
-msgstr "تقييمات المنتجات"
+msgstr ""
 
 #: promotions/templates/promotions/mv_admin_promotions_promos.html:2
 #: promotions/templates/promotions/mv_admin_promotions_promos.html:5
 #: promotions/templates/promotions/mv_admin_promotions_promos.html:8
 msgid "Promo-Codes"
-msgstr "قسائم الشراء"
+msgstr ""
 
 #: security/templates/security/mv_admin_security_groups.html:8
 msgid "Security Groups"
-msgstr "المجموعات الأمنية"
+msgstr ""
 
 #: security/templates/security/mv_admin_security_permissions.html:8
 msgid "Security Permissions"
-msgstr "الصلاحيات"
+msgstr ""
 
 #: services/templates/services/mv_admin_services_categories.html:2
 #: services/templates/services/mv_admin_services_categories.html:5
 #: services/templates/services/mv_admin_services_categories.html:8
 msgid "Services Categories"
-msgstr "أقسام الخدمات"
+msgstr ""
 
 #: services/templates/services/mv_admin_services_providers.html:2
 #: services/templates/services/mv_admin_services_providers.html:5
 #: services/templates/services/mv_admin_services_providers.html:8
 msgid "Services Providers"
-msgstr "مقدمو الخدمة"
+msgstr ""
 
 #: users/templates/users/mv_admin_users_logs.html:2
 #: users/templates/users/mv_admin_users_logs.html:5
 #: users/templates/users/mv_admin_users_logs.html:8
 msgid "Logs"
-msgstr "السجلات"
+msgstr ""
 
 #: vendors/templates/vendors/mv_admin_vendors_ratings.html:2
 #: vendors/templates/vendors/mv_admin_vendors_ratings.html:5
 #: vendors/templates/vendors/mv_admin_vendors_ratings.html:8
 msgid "Vendors Ratings"
-msgstr "تقييمات التجار"
+msgstr ""

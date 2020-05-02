@@ -134,6 +134,10 @@ LANGUAGE_CODE = "en"
 LANGUAGES = (
     ("en", _("English")),
     ("ar", _("Arabic")),
+    ("es", _("Spanish")),
+    ("it", _("Italian")),
+    ("de", _("German")),
+    ("fr", _("French")),
 )
 
 LOCALE_PATHS = (os.path.join(BASE_DIR, "locale"),)
