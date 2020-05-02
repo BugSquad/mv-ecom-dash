@@ -83,6 +83,42 @@
               </form>
             </a>
           </div>
+          <div class="col text-center">
+            <a>
+              <form name="setLangSpanish" method="post" action="/i18n/setlang/">{% csrf_token %}
+                <input name="next" type="hidden" value="/" />
+                <input name="language" type="hidden" value="es"/>
+                <input name="submit" type="image" src="{{ MEDIA_URL }}/flags/spanish.png" alt="Spanish" width="48" height="48">
+              </form>
+            </a>
+          </div>
+          <div class="col text-center">
+            <a>
+              <form name="setLangGerman" method="post" action="/i18n/setlang/">{% csrf_token %}
+                <input name="next" type="hidden" value="/" />
+                <input name="language" type="hidden" value="de"/>
+                <input name="submit" type="image" src="{{ MEDIA_URL }}/flags/german.png" alt="German" width="48" height="48">
+              </form>
+            </a>
+          </div>
+          <div class="col text-center">
+            <a>
+              <form name="setLangFrench" method="post" action="/i18n/setlang/">{% csrf_token %}
+                <input name="next" type="hidden" value="/" />
+                <input name="language" type="hidden" value="fr"/>
+                <input name="submit" type="image" src="{{ MEDIA_URL }}/flags/french.png" alt="French" width="48" height="48">
+              </form>
+            </a>
+          </div>
+          <div class="col text-center">
+            <a>
+              <form name="setLangItalian" method="post" action="/i18n/setlang/">{% csrf_token %}
+                <input name="next" type="hidden" value="/" />
+                <input name="language" type="hidden" value="it"/>
+                <input name="submit" type="image" src="{{ MEDIA_URL }}/flags/italian.png" alt="Italian" width="48" height="48">
+              </form>
+            </a>
+          </div>
         </div>
       </div>
     </div>

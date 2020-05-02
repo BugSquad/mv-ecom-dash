@@ -80,6 +80,7 @@ urlpatterns = [
     url(r"^products/$", prviews.products, name="mv_admin_products"),
     url(r"^prd-categories/$", prviews.categories, name="mv_admin_prd_categories"),
     url(r"^prd-ratings/$", prviews.ratings, name="mv_admin_prd_ratings"),
+    url(r"^prd-specs/$", prviews.specs, name="mv_admin_prd_specs"),
     url(r"^promotions/$", prmviews.promotions, name="mv_admin_promotions"),
     url(r"^prm-discounts/$", prmviews.discounts, name="mv_admin_prm_discounts"),
     url(r"^prm-promocodes/$", prmviews.promocodes, name="mv_admin_prm_promocodes"),

@@ -31,3 +31,11 @@ def ratings(request):
     return render(
         request, "products/mv_admin_products_ratings.html", {"nav_active": "products"}
     )
+
+@staff_member_required(login_url="/login/?next=/prd-specs/")
+def specs(request):
+    """Specifications page.
+    """
+    return render(
+        request, "products/mv_admin_products_specs.html", {"nav_active": "products"}
+    )
