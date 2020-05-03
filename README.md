@@ -1,7 +1,7 @@
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Python 3](https://pyup.io/repos/github/BugSquad/mv-ecom-dash/python-3-shield.svg)](https://pyup.io/repos/github/BugSquad/mv-ecom-dash/)
-[![Python 3.7](https://img.shields.io/badge/python-3.7.4-blue.svg)](https://docs.python.org/3.7/whatsnew/changelog.html#python-3-7-4-final/)<br />
+[![Python 3](https://pyup.io/repos/github/BugSquad/mv-ecom-dash/python-3-shield.svg)](https://pyup.io/repos/github/BugSquad/mv-ecom-dash/)<br />
+<!-- [![Python 3.7](https://img.shields.io/badge/python-3.7.4-blue.svg)](https://docs.python.org/3.7/whatsnew/changelog.html#python-3-7-4-final/) -->
 [![Updates](https://pyup.io/repos/github/BugSquad/mv-ecom-dash/shield.svg)](https://pyup.io/repos/github/BugSquad/mv-ecom-dash/)
 [![Build Status](https://img.shields.io/travis/BugSquad/mv-ecom-dash/develop.svg?logo=travis)](https://travis-ci.com/BugSquad/mv-ecom-dash)
 [![codecov](https://codecov.io/gh/BugSquad/mv-ecom-dash/branch/develop/graph/badge.svg)](https://codecov.io/gh/BugSquad/mv-ecom-dash)
