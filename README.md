@@ -1,3 +1,5 @@
+<a href='https://ko-fi.com/mabuzaid' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=f' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a> 
+
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Python 3](https://pyup.io/repos/github/BugSquad/mv-ecom-dash/python-3-shield.svg)](https://pyup.io/repos/github/BugSquad/mv-ecom-dash/)
