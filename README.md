@@ -7,6 +7,7 @@
 [![codecov](https://codecov.io/gh/BugSquad/mv-ecom-dash/branch/develop/graph/badge.svg)](https://codecov.io/gh/BugSquad/mv-ecom-dash)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 <br /><br />
+<a href='https://ko-fi.com/V7V31Q836' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 [![Tweet](https://img.shields.io/twitter/url/https/github.com/tterb/hyde.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20MV-Ecom!%20%E2%9C%A8%20An%20%23opensource%20admin%20panel%20for%20multi-vendor%20e-commerce%20platforms%20built%20with%20%23python%20%23django%20https%3A%2F%2Fgithub.com%2FBugSquad%2Fmv-ecom-dash%20%F0%9F%A4%97)
 
 Created by [**Mohamad Abuzaid**](https://github.com/mohamad-abuzaid)
