@@ -98,5 +98,12 @@ If you're certain you've come across a bug, then please use the [GitHub issue tr
 ### You can contribute by:<br />
 1) Implement new features from ones listed on the [Issue tracker](https://github.com/BugSquad/mv-ecom-dash/issues).<br />
 2) Fix bugs reported on the Issue tracker.
-3) Help spread our dashboard by adding, reviewing and fixing translations to supported languages.
+3) Help spread our dashboard by adding, reviewing and fixing translations to supported languages.<br /><br />
+
+### Bounties:<br />
+Some issues/features a of more value and priority to solve, so we put a bounty on them. Bounties values can vary from $10 to higher.
+If you want to earn some extra bucks while contributing, make sure to check those issues/features with bounties first.
+But remember ==> **"Don't start working on any issue/feature before contacting us and get the issue/feature assigned to you"**
+
+                                                     **GoodLuck**
 
