@@ -102,7 +102,7 @@ If you're certain you've come across a bug, then please use the [GitHub issue tr
 
 ### Bounties:<br />
 Some issues/features a of more value and priority to solve, so we put a bounty on them. Bounties values can vary from $10 to higher.
-If you want to earn some extra bucks while contributing, make sure to check those issues/features with bounties first.
+If you want to earn some extra bucks while contributing, make sure to check those issues/features with bounties first.<br />
 But remember ==> **"Don't start working on any issue/feature before contacting us and get the issue/feature assigned to you"**
 
                                                      **GoodLuck**
