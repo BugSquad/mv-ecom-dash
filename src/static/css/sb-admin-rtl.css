@@ -6,5 +6,6 @@
   footer.sticky-footer {right: auto; left: 0;}
   .scroll-to-top {right: auto; left: 15px;}
   .sidebar .nav-item .nav-link {text-align: right;}
+  .dropdown-menu-right {right: auto; left: 0;}
   .navbar-nav .nav-item.dropdown .dropdown-toggle::after {float: left; content: '\f104';}
 }

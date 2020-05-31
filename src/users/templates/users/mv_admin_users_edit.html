@@ -1,25 +1,24 @@
 {% extends "baseview/base.html" %}{% load static %}{% load i18n %}
-{% block sb_admin_title %}{% trans 'Profile' %}{% endblock sb_admin_title %}
+{% block sb_admin_title %}{% trans 'Create / Edit' %}{% endblock sb_admin_title %}
 
 {% block sb_admin_breadcrumb_active %}<li class="breadcrumb-item active">
-      {% trans 'Profile' %}
+      {% trans 'Create / Edit' %}
  </li>{% endblock sb_admin_breadcrumb_active %}
 {% block sb_admin_content %}
-<h1>{% trans 'Profile' %}</h1>
+<h1>{% trans 'Create / Edit' %}</h1>
 <hr>
-<p>This is a great starting point for new Profile pages.</p>
 <form>
       <div class="form-group">
       <div class="form-row">
             <div class="col-md-4">
             <div class="form-label-group">
-                  <input type="text" id="joinDate" class="form-control" placeholder="{% trans 'Join date' %}" disabled>
+                  <input type="text" id="joinDate" class="form-control" placeholder="{% trans 'Join date' %}" required="required" autofocus="autofocus">
                   <label for="joinDate">{% trans 'Join date' %}</label>
             </div>
             </div>
             <div class="col-md-4">
             <div class="form-label-group">
-                  <label type="text" id="lastLogin" class="form-control">{{ user.last_login }}</label>
+                  <input type="text" id="lastLogin" class="form-control" placeholder="{% trans 'Last login' %}" required="required">
                   <label for="lastLogin">{% trans 'Last login' %}</label>
             </div>
             </div>
@@ -29,13 +28,13 @@
       <div class="form-row">
             <div class="col-md-4">
             <div class="form-label-group">
-                  <input type="text" id="userId" class="form-control" placeholder="{% trans 'User Id' %}" disabled>
+                  <input type="text" id="userId" class="form-control" placeholder="{% trans 'User Id' %}" required="required" autofocus="autofocus">
                   <label for="userId">{% trans 'User Id' %}</label>
             </div>
             </div>
             <div class="col-md-4">
             <div class="form-label-group">
-                  <input type="text" id="groupId" class="form-control" placeholder="{% trans 'Group Id' %}" disabled>
+                  <input type="text" id="groupId" class="form-control" placeholder="{% trans 'Group Id' %}" required="required">
                   <label for="groupId">{% trans 'Group Id' %}</label>
             </div>
             </div>
@@ -45,13 +44,13 @@
       <div class="form-row">
             <div class="col-md-4">
             <div class="form-label-group">
-                  <input type="text" id="firstName" class="form-control" placeholder="{% trans 'First name' %}" disabled>
+                  <input type="text" id="firstName" class="form-control" placeholder="{% trans 'First name' %}" required="required" autofocus="autofocus">
                   <label for="firstName">{% trans 'First name' %}</label>
             </div>
             </div>
             <div class="col-md-4">
             <div class="form-label-group">
-                  <input type="text" id="middleName" class="form-control" placeholder="{% trans 'Middle name' %}" disabled>
+                  <input type="text" id="middleName" class="form-control" placeholder="{% trans 'Middle name' %}" required="required">
                   <label for="middleName">{% trans 'Middle name' %}</label>
             </div>
             </div>
@@ -61,17 +60,20 @@
       <div class="form-row">
             <div class="col-md-4">
             <div class="form-label-group">
-                  <input type="text" id="lastName" class="form-control" placeholder="{% trans 'Last name' %}" disabled>
+                  <input type="text" id="lastName" class="form-control" placeholder="{% trans 'Last name' %}" required="required" autofocus="autofocus">
                   <label for="lastName">{% trans 'Last name' %}</label>
             </div>
             </div>
             <div class="col-md-4">
             <div class="form-label-group">
-                  <input type="text" id="status" class="form-control" placeholder="{% trans 'Status' %}" disabled>
+                  <input type="text" id="status" class="form-control" placeholder="{% trans 'Status' %}" required="required">
                   <label for="status">{% trans 'Status' %}</label>
             </div>
             </div>
       </div>
+      </div>
+      <div class="form-group">
+            <input type="submit" class="btn btn-success btn-block" value="{% trans 'Submit' %}">
       </div>
 </form>
 {% endblock sb_admin_content %}

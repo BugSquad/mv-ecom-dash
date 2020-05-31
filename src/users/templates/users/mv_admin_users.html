@@ -8,5 +8,9 @@
 <h1>{% trans 'Users' %}</h1>
 <hr>
 <p>This is a great starting point for new Users pages.</p>
-
+<form action="{% url 'mv_admin_us_create' %}" method="get">{% csrf_token %}
+      <div class="form-group">
+      <input type="submit" class="btn btn-success btn-block" value="{% trans 'Create' %}">
+      </div>
+</form>
 {% endblock sb_admin_content %}

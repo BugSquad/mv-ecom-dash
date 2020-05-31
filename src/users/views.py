@@ -15,8 +15,11 @@ def users(request):
 def user_profile(request):
     """Profile page.
     """
-    return render(request, "users/mv_admin_users_profile.html", {"nav_active": "users"})
-
+    context = {
+        "nav_active": "users",
+        "user":request.user
+    }
+    return render(request, "users/mv_admin_users_profile.html", context)
 
 @staff_member_required(login_url="/login/?next=/us-settings/")
 def user_settings(request):
@@ -26,9 +29,14 @@ def user_settings(request):
         request, "users/mv_admin_users_settings.html", {"nav_active": "users"}
     )
 
-
 @staff_member_required(login_url="/login/?next=/us-logs/")
 def user_logs(request):
     """Logs page.
     """
     return render(request, "users/mv_admin_users_logs.html", {"nav_active": "users"})
+
+@staff_member_required(login_url="/login/?next=/us-logs/")
+def user_create(request):
+    """Create User page.
+    """
+    return render(request, "users/mv_admin_users_edit.html", {"nav_active": "users"})
