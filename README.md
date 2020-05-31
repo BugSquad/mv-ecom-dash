@@ -1,12 +1,13 @@
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Python 3](https://pyup.io/repos/github/BugSquad/mv-ecom-dash/python-3-shield.svg)](https://pyup.io/repos/github/BugSquad/mv-ecom-dash/)
-[![Python 3.7](https://img.shields.io/badge/python-3.7.4-blue.svg)](https://docs.python.org/3.7/whatsnew/changelog.html#python-3-7-4-final/)<br />
+[![Python 3](https://pyup.io/repos/github/BugSquad/mv-ecom-dash/python-3-shield.svg)](https://pyup.io/repos/github/BugSquad/mv-ecom-dash/)<br />
+<!-- [![Python 3.7](https://img.shields.io/badge/python-3.7.4-blue.svg)](https://docs.python.org/3.7/whatsnew/changelog.html#python-3-7-4-final/) -->
 [![Updates](https://pyup.io/repos/github/BugSquad/mv-ecom-dash/shield.svg)](https://pyup.io/repos/github/BugSquad/mv-ecom-dash/)
 [![Build Status](https://img.shields.io/travis/BugSquad/mv-ecom-dash/develop.svg?logo=travis)](https://travis-ci.com/BugSquad/mv-ecom-dash)
 [![codecov](https://codecov.io/gh/BugSquad/mv-ecom-dash/branch/develop/graph/badge.svg)](https://codecov.io/gh/BugSquad/mv-ecom-dash)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 <br /><br />
+<a href='https://ko-fi.com/V7V31Q836' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 [![Tweet](https://img.shields.io/twitter/url/https/github.com/tterb/hyde.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20MV-Ecom!%20%E2%9C%A8%20An%20%23opensource%20admin%20panel%20for%20multi-vendor%20e-commerce%20platforms%20built%20with%20%23python%20%23django%20https%3A%2F%2Fgithub.com%2FBugSquad%2Fmv-ecom-dash%20%F0%9F%A4%97)
 
 Created by [**Mohamad Abuzaid**](https://github.com/mohamad-abuzaid)
@@ -15,7 +16,7 @@ Created by [**Mohamad Abuzaid**](https://github.com/mohamad-abuzaid)
 
 ## [1] OverView
 
-An **Python-Django** Admin panel and a dashboard for a multi-vendor e-commerce websites...</br>
+A **Python-Django** Admin panel and a dashboard for a multi-vendor e-commerce websites...</br>
 [**SB Admin**](https://startbootstrap.com/templates/sb-admin/) from **Start Bootstrap** is used for HTML templates.
 
 MV-Ecom Dasboard is an Admin panel built with Python Django to manage and control a **Multi Vendor E-commerce** platform with model simillar to Amazon or AliBaba. Where multiple sellers can register their shops and products for customers to view and make purchases.
@@ -97,5 +98,12 @@ If you're certain you've come across a bug, then please use the [GitHub issue tr
 ### You can contribute by:<br />
 1) Implement new features from ones listed on the [Issue tracker](https://github.com/BugSquad/mv-ecom-dash/issues).<br />
 2) Fix bugs reported on the Issue tracker.
-3) Help spread our dashboard by adding, reviewing and fixing translations to supported languages.
+3) Help spread our dashboard by adding, reviewing and fixing translations to supported languages.<br /><br />
+
+### Bounties:<br />
+Some issues/features a of more value and priority to solve, so we put a bounty on them. Bounties values can vary from $10 to higher.
+If you want to earn some extra bucks while contributing, make sure to check those issues/features with bounties first.<br />
+But remember ==> **"Don't start working on any issue/feature before contacting us and get the issue/feature assigned to you"**
+
+                                                     **GoodLuck**
 
