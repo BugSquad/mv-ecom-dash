@@ -38,8 +38,10 @@ import reports.views as rptviews
 
 from authorization.templates_views.reset_password_view import ResetPasswordRequestView
 from authorization.templates_views.change_password_view import PasswordResetConfirmView
+from django.contrib import admin
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     url(
         r"^(?P<filename>(robots.txt)|(humans.txt))$",
         bviews.robots_txt,
@@ -83,9 +85,11 @@ urlpatterns = [
     url(r"^prd-specs/$", prviews.specs, name="mv_admin_prd_specs"),
     url(r"^promotions/$", prmviews.promotions, name="mv_admin_promotions"),
     url(r"^prm-discounts/$", prmviews.discounts, name="mv_admin_prm_discounts"),
-    url(r"^prm-promocodes/$", prmviews.promocodes, name="mv_admin_prm_promocodes"),
+    url(r"^prm-promocodes/$", prmviews.promocodes,
+        name="mv_admin_prm_promocodes"),
     url(r"^prm-badges/$", prmviews.badges, name="mv_admin_prm_badges"),
-    url(r"^prm-advertising/$", prmviews.advertising, name="mv_admin_prm_advertising"),
+    url(r"^prm-advertising/$", prmviews.advertising,
+        name="mv_admin_prm_advertising"),
     url(r"^finance/$", fviews.finance, name="mv_admin_finance"),
     url(r"^fin-orders/$", fviews.orders, name="mv_admin_fin_orders"),
     url(r"^fin-payments/$", fviews.payments, name="mv_admin_fin_payments"),
@@ -95,15 +99,18 @@ urlpatterns = [
     url(r"^fin-methods/$", fviews.methods, name="mv_admin_fin_methods"),
     url(r"^support/$", spviews.support, name="mv_admin_support"),
     url(r"^spt-complaints/$", spviews.complaints, name="mv_admin_spt_complaints"),
-    url(r"^spt-suggestions/$", spviews.suggestions, name="mv_admin_spt_suggestions"),
+    url(r"^spt-suggestions/$", spviews.suggestions,
+        name="mv_admin_spt_suggestions"),
     url(r"^security/$", secviews.security, name="mv_admin_security"),
     url(r"^sec-groups/$", secviews.groups, name="mv_admin_sec_groups"),
-    url(r"^sec-permissions/$", secviews.permissions, name="mv_admin_sec_permissions"),
+    url(r"^sec-permissions/$", secviews.permissions,
+        name="mv_admin_sec_permissions"),
     url(r"^reports/$", rptviews.reports, name="mv_admin_reports"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.STATIC_URL,
+                          document_root=settings.STATIC_ROOT)
 
 # handler400 = 'utils.views.error_400'
 # handler403 = 'utils.views.error_403'
