@@ -13,6 +13,8 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
+from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import url
@@ -22,7 +24,6 @@ from django.conf.urls.i18n import i18n_patterns
 
 import authorization.views as athviews
 import baseview.views as bviews
-import dashboard.views as dviews
 import utils.views as uviews
 import users.views as usviews
 import services.views as srviews
@@ -36,10 +37,13 @@ import support.views as spviews
 import security.views as secviews
 import reports.views as rptviews
 
+<<<<<<< HEAD
 from authorization.templates_views.reset_password_view import ResetPasswordRequestView
 from authorization.templates_views.change_password_view import PasswordResetConfirmView
 from django.contrib import admin
 
+=======
+>>>>>>> develop
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(
@@ -47,6 +51,7 @@ urlpatterns = [
         bviews.robots_txt,
         name="robots-files",
     ),
+<<<<<<< HEAD
     url(r"^i18n/", include("django.conf.urls.i18n")),
     url(r"^blank/$", uviews.blank, name="mv_admin_blank"),
     path(
@@ -106,6 +111,13 @@ urlpatterns = [
     url(r"^sec-permissions/$", secviews.permissions,
         name="mv_admin_sec_permissions"),
     url(r"^reports/$", rptviews.reports, name="mv_admin_reports"),
+=======
+    path('admin/', admin.site.urls),
+    url(r'^jet/', include('jet.urls', 'jet')),
+    url(r"^i18n/", include("django.conf.urls.i18n")),   # Django JET URLS
+    url(r'^jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS
+
+>>>>>>> develop
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
