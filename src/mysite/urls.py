@@ -46,12 +46,14 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^jet/', include('jet.urls', 'jet')),
     url(r"^i18n/", include("django.conf.urls.i18n")),   # Django JET URLS
-    url(r'^jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS
+    url(r'^jet/dashboard/', include('jet.dashboard.urls',
+                                    'jet-dashboard')),  # Django JET dashboard URLS
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.STATIC_URL,
+                          document_root=settings.STATIC_ROOT)
 
 # handler400 = 'utils.views.error_400'
 # handler403 = 'utils.views.error_403'
