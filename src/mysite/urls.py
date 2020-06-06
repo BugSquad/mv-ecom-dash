@@ -38,6 +38,7 @@ import security.views as secviews
 import reports.views as rptviews
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     url(
         r"^(?P<filename>(robots.txt)|(humans.txt))$",
         bviews.robots_txt,
@@ -51,7 +52,8 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.STATIC_URL,
+                          document_root=settings.STATIC_ROOT)
 
 # handler400 = 'utils.views.error_400'
 # handler403 = 'utils.views.error_403'
