@@ -1,7 +1,7 @@
 asgiref==3.2.7
 Django==2.2.10
 django-jet==1.0.8
-pytz==2020.1
+pytz==2022.2.1
 sqlparse==0.3.1
 black==19.10b0
 codecov==2.0.22
